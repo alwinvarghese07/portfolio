@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.custom-grain-layer::before {
+  content: "";
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+
+  z-index: -1;
+  /* background layer */
+  pointer-events: none;
+
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
+
+  /* ⭐ THE IMPORTANT FIXES */
+  will-change: transform;
+  transform: translateZ(0);
+  /* forces GPU layer */
+  backface-visibility: hidden;
+  contain: paint;
+
+  animation: noise 1s steps(2) infinite;
+}
+
+@keyframes grainMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 40px -30px;
+  }
+
+  50% {
+    background-position: -30px 20px;
+  }
+
+  75% {
+    background-position: 20px 40px;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes noise {
+  to {
+    transform: translate3d(-7rem, 0, 0)
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0)
+  }
+
+  10% {
+    transform: translate3d(-1rem, -4rem, 0)
+  }
+
+  20% {
+    transform: translate3d(-8rem, 2rem, 0)
+  }
+
+  30% {
+    transform: translate3d(9rem, -9rem, 0)
+  }
+
+  40% {
+    transform: translate3d(-2rem, 7rem, 0)
+  }
+
+  50% {
+    transform: translate3d(-9rem, -4rem, 0)
+  }
+
+  60% {
+    transform: translate3d(2rem, 6rem, 0)
+  }
+
+  70% {
+    transform: translate3d(7rem, -8rem, 0)
+  }
+
+  80% {
+    transform: translate3d(-9rem, 1rem, 0)
+  }
+
+  90% {
+    transform: translate3d(6rem, -5rem, 0)
+  }
+
+  to {
+    transform: translate3d(-7rem, 0, 0)
+  }
+}
