@@ -1,6 +1,5 @@
 interface ProjectCardProps {
     title: string;
-    role: string;
     description: string;
     tags: string[];
     mediaUrl?: string;
@@ -9,7 +8,6 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
     title,
-    role,
     description,
     tags,
     mediaUrl,
@@ -49,9 +47,6 @@ export default function ProjectCard({
                     <h3 className="text-2xl font-bold text-black font-['Inter'] tracking-tight">
                         {title}
                     </h3>
-                    <p className="text-sm font-semibold text-black/40 uppercase tracking-wider font-['Inter']">
-                        {role}
-                    </p>
                 </div>
 
                 <p className="text-base text-black/70 font-['Inter'] leading-relaxed max-w-[90%]">

@@ -3,16 +3,15 @@ import MainLayout from "../layouts/MainLayout";
 import HomeSection from "../components/home";
 import Exp from "../components/exp";
 import ProjectsSection from "../components/ProjectsSection";
+import Footer from "../components/FooterLight";
 
 export default function Home() {
     return (
         <div className="relative bg-black">
-            <div className="fixed inset-0 pointer-events-none z-50">
-                <div className="custom-grain-layer"></div>
-                <div className="image opacity-10"></div>
-            </div>
-
-            <section className="relative z-30 bg-black h-screen">
+            <section className="relative z-30 bg-black h-screen overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden">
+                    <div className="custom-grain-layer"></div>
+                </div>
                 <MainLayout>
                     <div className="flex flex-col h-screen overflow-hidden">
                         <div className="h-[10vh]">
@@ -29,8 +28,9 @@ export default function Home() {
             </section>
 
             <section className="sticky top-0 z-20 min-h-screen bg-white w-full py-20 -mt-[100vh]">
-                <div className="flex flex-col items-center px-[120px]">
+                <div className="flex flex-col items-center">
                     <ProjectsSection />
+                    <Footer />
                 </div>
             </section>
 

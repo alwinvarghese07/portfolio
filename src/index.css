@@ -13,18 +13,29 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+body {
+  cursor: none;
+}
+
+a,
+button,
+[data-cursor] {
+  cursor: none !important;
 }
 
 
 .custom-grain-layer::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: -10rem;
   left: -10rem;
   width: calc(100% + 20rem);
   height: calc(100% + 20rem);
 
-  z-index: -1;
+  z-index: 1;
   /* background layer */
   pointer-events: none;
 
@@ -33,7 +44,7 @@
   background-size: 300px;
 
   opacity: 0.22;
-  mix-blend-mode: soft-light;
+  mix-blend-mode: screen;
 
   /* ⭐ THE IMPORTANT FIXES */
   will-change: transform;
