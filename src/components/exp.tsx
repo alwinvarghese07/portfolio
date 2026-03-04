@@ -5,12 +5,12 @@ export default function Exp() {
     return (
         <div className="flex flex-col justify-center h-full items-center w-full gap-8">
 
-            <div className="font-['Inter'] font-medium text-[32px]">
+            <div className="font-['Inter'] font-medium text-[28px]">
                 <h1>Experience crafted alongside</h1>
             </div>
             <div className="flex flex-row justify-between gap-10">
-                <img src={manormama} alt="manormama" className="w-[300px]" />
-                <img src={itpro} alt="itpro" className="w-[300px]" />
+                <img src={manormama} alt="manormama" className="w-[250px]" />
+                <img src={itpro} alt="itpro" className="w-[250px]" />
             </div>
 
         </div>

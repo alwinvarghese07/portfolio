@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div className="flex justify-end items-end">
+        <div className="flex flex-col justify-end items-end gap-6">
             <div className="flex gap-10 font-medium text-[20px] text-white">
                 <NavLink
                     to="/"
@@ -29,6 +29,7 @@ export default function Navbar() {
                     Resume
                 </a>
             </div>
+            {/* <div className="border-b border-[#5b5b5b] w-full"></div> */}
         </div>
     );
 }

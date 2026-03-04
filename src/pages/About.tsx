@@ -18,15 +18,12 @@ export default function About() {
                             <Navbar />
                         </div>
 
-                        {/* A bit about me section */}
-                        <div className="py-20 px-60 flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
-                            {/* Profile Image Column */}
+                        <div className="py-20 flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
                             <div className="w-full md:w-[45%]">
                                 <div className="aspect-square relative rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-2xl">
                                     <div className="absolute inset-0 flex items-center justify-center text-white/5">
-                                        [Professional Profile Image]
+                                        [Well… this should have loaded by now 🤔]
                                     </div>
-                                    {/* Placeholder - User should replace src with their actual image */}
                                     <img
                                         src={profile}
                                         alt="Alwin Varghese Saji"
@@ -34,10 +31,9 @@ export default function About() {
                                 </div>
                             </div>
 
-                            {/* Bio Column */}
-                            <div className="w-full md:w-[55%] flex flex-col gap-8 pt-4">
-                                <div className="mb-[20px]">
-                                    <span className="text-sm font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single']  text-[64px] tracking-[1px]">
+                            <div className="w-full flex flex-col gap-8">
+                                <div>
+                                    <span className="text-sm font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-[64px] leading-[100%] tracking-[1px]">
                                         A bit about me
                                     </span>
                                 </div>
