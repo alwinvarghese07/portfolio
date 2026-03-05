@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import CaseStudy from "./pages/CaseStudy";
+import MainLayout from "./layouts/MainLayout";
 
 function ScrollManager() {
   const location = useLocation();
@@ -42,8 +44,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/case-study/:id" element={<CaseStudy />} />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

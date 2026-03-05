@@ -22,7 +22,7 @@ export default function About() {
                             <div className="w-full md:w-[45%]">
                                 <div className="aspect-square relative rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-2xl">
                                     <div className="absolute inset-0 flex items-center justify-center text-white/5">
-                                        [Well… this should have loaded by now 🤔]
+                                        [Well… this should have loaded by now]
                                     </div>
                                     <img
                                         src={profile}

@@ -5,6 +5,7 @@ import DribbbleShot from "../assets/videos/Dribbble-shot.mp4";
 
 const PROJECTS = [
     {
+        id: "tumbledry",
         title: "TumbleDry",
         description: "Redesigned TumbleDry - A laundry service platform, improving booking clarity, service selection, and the overall user experience.",
         tags: ["User Flows", "Wireframes", "UX Research", "Prototyping", "UI Design"],
@@ -12,6 +13,7 @@ const PROJECTS = [
         isVideo: true,
     },
     {
+        id: "wander",
         title: "Wander",
         description: "Built a platform to help people plan outdoor adventures with personalized suggestions and simple trip management.",
         tags: ["User Flows", "Wireframes", "UX Research", "Prototyping", "UI Design"],

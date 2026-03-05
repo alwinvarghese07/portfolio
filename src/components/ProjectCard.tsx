@@ -4,17 +4,21 @@ interface ProjectCardProps {
     tags: string[];
     mediaUrl?: string;
     isVideo?: boolean;
+    id?: string;
 }
+
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({
     title,
     description,
     tags,
     mediaUrl,
-    isVideo = false
+    isVideo = false,
+    id
 }: ProjectCardProps) {
-    return (
-        <div className="flex flex-col gap-6 group">
+    const CardContent = (
+        <>
             {/* 1. Media Container */}
             <div className="aspect-video w-full bg-zinc-100 rounded-[32px] overflow-hidden relative">
                 {mediaUrl ? (
@@ -64,6 +68,20 @@ export default function ProjectCard({
                     ))}
                 </div>
             </div>
+        </>
+    );
+
+    if (id) {
+        return (
+            <Link to={`/case-study/${id}`} className="flex flex-col gap-6 group cursor-pointer">
+                {CardContent}
+            </Link>
+        );
+    }
+
+    return (
+        <div className="flex flex-col gap-6 group">
+            {CardContent}
         </div>
     );
 }
