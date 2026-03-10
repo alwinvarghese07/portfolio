@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div className="flex flex-col justify-end items-end gap-6">
-            <div className="flex gap-10 font-medium text-[20px] text-white">
+        <div className="flex flex-col justify-center items-center md:justify-end md:items-end gap-6 pt-4 md:pt-0">
+            <div className="flex gap-6 md:gap-10 font-medium text-lg md:text-[20px] text-white">
                 <NavLink
                     to="/"
                     className={({ isActive }) =>

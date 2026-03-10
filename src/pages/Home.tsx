@@ -8,19 +8,19 @@ import Footer from "../components/FooterLight";
 export default function Home() {
     return (
         <div className="relative bg-black">
-            <section className="relative z-30 bg-black h-screen overflow-hidden">
+            <section className="relative z-30 bg-black min-h-screen md:h-screen md:overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden">
                     <div className="custom-grain-layer"></div>
                 </div>
                 <MainLayout>
-                    <div className="flex flex-col h-screen overflow-hidden">
-                        <div className="h-[10vh]">
+                    <div className="flex flex-col min-h-screen md:h-screen md:overflow-hidden">
+                        <div className="h-auto md:h-[10vh]">
                             <Navbar />
                         </div>
-                        <div className="h-[60vh]">
+                        <div className="h-auto md:h-[60vh] py-10 md:py-0">
                             <HomeSection />
                         </div>
-                        <div className="h-[40vh]">
+                        <div className="h-auto md:h-[40vh] py-10 md:py-0">
                             <Exp />
                         </div>
                     </div>

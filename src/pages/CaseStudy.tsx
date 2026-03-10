@@ -5,6 +5,7 @@ import DribbbleShot from "../assets/videos/Dribbble-shot.mp4";
 import Navbar from "../components/navbar";
 import FooterDark from "../components/FooterDark";
 import CustomCursor from "../components/CustomCursor";
+import TumbledryContent from "../components/case-studies/TumbledryContent";
 import WanderContent from "../components/case-studies/WanderContent";
 import Wander from "../assets/images/header.png";
 import TumbleDry from "../assets/images/alwin.png";
@@ -13,8 +14,8 @@ import TumbleDry from "../assets/images/alwin.png";
 const getCaseStudyData = (id: string | undefined) => {
     if (id === "tumbledry") {
         return {
-            title: "TumbleDry",
-            subtitle: "Redesigned TumbleDry - A laundry service platform",
+            title: "Tumbledry",
+            subtitle: "Reimagining the laundry pickup experience.",
             description: "improving booking clarity, service selection, and the overall user experience.",
             tags: ["User Flows", "Wireframes", "UX Research", "Prototyping", "UI Design"],
             mediaUrl: ShowreelVideo,
@@ -79,8 +80,13 @@ export default function CaseStudy() {
                             <h1 className="text-[48px] md:text-[64px] font-['Bitcount_Prop_Single'] leading-tight tracking-tight">
                                 {data.title}
                             </h1>
+                            {data.subtitle && (
+                                <p className="text-xl md:text-2xl text-zinc-400 mt-2 font-medium tracking-wide">
+                                    {data.subtitle}
+                                </p>
+                            )}
                             {/* Tags */}
-                            <div className="flex flex-wrap gap-3 mt-4">
+                            <div className="flex flex-wrap gap-3 mt-6">
                                 {data.tags.map((tag) => (
                                     <span
                                         key={tag}
@@ -94,17 +100,32 @@ export default function CaseStudy() {
                     </div>
 
                     {/* Media Hero */}
-                    <div className="w-full mt-10 rounded-3xl overflow-hidden aspect-video relative bg-zinc-900 border border-zinc-800/50">
-                        <img
-                            src={data.image}
-                            className="w-full h-full object-cover"
-                        />
+                    <div className="w-full mt-12 rounded-[2.5rem] overflow-hidden aspect-video relative bg-zinc-900 border border-zinc-800/50 shadow-2xl">
+                        {id === "tumbledry" && data.mediaUrl ? (
+                            <video
+                                src={data.mediaUrl}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                            />
+                        ) : (
+                            <img
+                                src={data.image}
+                                className="w-full h-full object-cover"
+                            />
+                        )}
                     </div>
 
                     {/* Content Section */}
                     {id === "wander" ? (
                         <div className="mt-16 mb-24 w-full">
                             <WanderContent />
+                        </div>
+                    ) : id === "tumbledry" ? (
+                        <div className="mt-16 mb-24 w-full">
+                            <TumbledryContent />
                         </div>
                     ) : (
                         <div className="mt-16 mb-24 flex flex-col gap-8 w-full max-w-3xl">

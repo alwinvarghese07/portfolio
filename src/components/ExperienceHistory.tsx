@@ -8,7 +8,7 @@ export default function ExperienceHistory() {
     return (
         <div className="w-full flex flex-col">
             <div className="mb-[40px]">
-                <span className="text-sm font-bold text-[#8a8a8a] font-['Bitcount_Prop_Single']  text-[64px] tracking-[1px]">
+                <span className="text-4xl md:text-[64px] font-bold text-[#8a8a8a] font-['Bitcount_Prop_Single'] tracking-[1px]">
                     Experience
                 </span>
             </div>
@@ -17,12 +17,12 @@ export default function ExperienceHistory() {
                 {experiences.map((exp, index) => (
                     <div
                         key={index}
-                        className="flex justify-between items-center py-5 border-b border-black/5 last:border-none"
+                        className="flex flex-col md:flex-row justify-between items-start md:items-center py-5 border-b border-black/5 last:border-none gap-2 md:gap-0"
                     >
-                        <span className="text-[24px] font-medium text-black/90 font-['Inter']">
+                        <span className="text-xl md:text-[24px] font-medium text-black/90 font-['Inter']">
                             {exp.company}
                         </span>
-                        <span className="text-[18px] font-medium text-black/40 font-['Inter']">
+                        <span className="text-sm md:text-[18px] font-medium text-black/40 font-['Inter']">
                             {exp.period}
                         </span>
                     </div>

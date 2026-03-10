@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CaseStudy from "./pages/CaseStudy";
-import MainLayout from "./layouts/MainLayout";
 
 function ScrollManager() {
   const location = useLocation();
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -16,28 +16,30 @@ function ScrollManager() {
       wheelMultiplier: 0.9,
       smoothWheel: true,
     });
+    lenisRef.current = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
+    const rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);
 
-  // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
   return null;
-}
-
-function App() {
+} function App() {
   return (
     <BrowserRouter>
       <ScrollManager />

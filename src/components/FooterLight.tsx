@@ -4,9 +4,9 @@ import xIcon from "../assets/images/insta.png";
 
 export default function Footer() {
     return (
-        <footer className="w-full mt-40 pt-10 border-t border-[#D0D0D0]">
+        <footer className="w-full mt-20 pt-10 border-t border-[#D0D0D0]">
             <div className="max-w-[1400px] mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-10 mt-10">
                     {/* Left side */}
                     <div className="flex flex-col gap-4">
                         <h2 className="text-[32px] font-bold text-black font-['Inter'] leading-tight">
@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
 
                     {/* Right side */}
-                    <div className="flex flex-col items-end gap-6 text-right">
+                    <div className="flex flex-col items-center md:items-end gap-6 text-center md:text-right w-full md:w-auto">
                         <span className="text-[18px] text-black/50 font-['Inter']">
                             Let's keep the conversation going.
                         </span>
@@ -44,9 +44,9 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="w-full mt-24 flex justify-center">
+                <div className="w-full mt-10 flex justify-center">
                     <span className="text-[14px] text-black/30 font-medium font-['Inter']">
-                        © Alwin Varghese Saji, 2025
+                        © Alwin Varghese Saji, 2026
                     </span>
                 </div>
             </div>

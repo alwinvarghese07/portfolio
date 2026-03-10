@@ -27,7 +27,7 @@ export default function ProjectsSection() {
         <div className="w-full max-w-[1400px] mx-auto px-4">
             <ExperienceHistory />
             <div className="mt-[100px] mb-[60px]">
-                <span className="text-sm font-bold text-[#8A8A8A] font-['Bitcount_Prop_Single']  text-[64px] tracking-[1px]">
+                <span className="text-4xl md:text-[64px] font-bold text-[#8A8A8A] font-['Bitcount_Prop_Single'] tracking-[1px]">
                     Selected Works
                 </span>
             </div>
