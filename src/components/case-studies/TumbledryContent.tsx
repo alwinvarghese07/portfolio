@@ -7,6 +7,8 @@ import highFidelity from "../../assets/images/highfidelity.png";
 import Reveal from "../reveal";
 import notif from "../../assets/videos/notif.mp4"
 import liveTracking from "../../assets/videos/live_tracking.mp4"
+import orderlive from "../../assets/videos/order_live.mp4"
+import hifi from "../../assets/images/hifi_designs.png"
 
 export default function TumbledryContent() {
     return (
@@ -134,8 +136,8 @@ export default function TumbledryContent() {
                                 The redesigned flow surfaces pricing earlier, captures important service details such as garment types, and introduces a confirmation step before scheduling pickup. Improvements were also made to navigation, order tracking, and information hierarchy to make the overall experience feel more transparent and predictable while keeping the booking process simple.                            </p>
                         </div>
                     </div>
-                    <div className="rounded-4xl overflow-hidden bg-zinc-900 mt-6 border border-zinc-800/50 p-4">
-                        <img src={highFidelity} alt="High Fidelity Screens" className="w-full h-auto rounded-3xl" />
+                    <div className="rounded-4xl overflow-hidden mt-6">
+                        <img src={hifi} alt="High Fidelity Screens" className="w-full h-full rounded-3xl" />
                     </div>
                 </div>
             </Reveal>
@@ -164,7 +166,7 @@ export default function TumbledryContent() {
                             </ul>
                         </div>
                         <div className="md:w-7/12 w-full rounded-4xl overflow-hidden bg-zinc-950 min-h-[400px] flex items-center justify-center border border-zinc-800/30 relative">
-                            <video src={DribbbleShot} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
+                            <video src={orderlive} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
                         </div>
                     </div>
                 </Reveal>
@@ -183,10 +185,9 @@ export default function TumbledryContent() {
                                 <li>Order details remain accessible throughout the journey</li>
                             </ul>
                         </div>
-                        <div className="md:w-7/12 w-full rounded-4xl overflow-hidden bg-[#CFEBFF] min-h-[400px] flex items-center justify-center">
-                            <div className="md:w-7/12 w-full rounded-4xl overflow-hidden min-h-[400px] flex items-center justify-center relative">
-                                <video src={liveTracking} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
-                            </div>
+
+                        <div className="md:w-7/12 rounded-4xl w-full overflow-hidden min-h-[400px] flex items-center justify-center relative">
+                            <video src={liveTracking} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
                         </div>
                     </div>
                 </Reveal>

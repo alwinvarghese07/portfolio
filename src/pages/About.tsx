@@ -9,7 +9,7 @@ export default function About() {
     return (
         <div className="relative bg-black min-h-screen">
             <section className="relative z-30 bg-black overflow-hidden">
-                <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
                     <div className="custom-grain-layer"></div>
                 </div>
                 <MainLayout>
