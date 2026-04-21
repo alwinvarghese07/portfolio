@@ -9,6 +9,11 @@ import notif from "../../assets/videos/notif.mp4"
 import liveTracking from "../../assets/videos/live_tracking.mp4"
 import orderlive from "../../assets/videos/order_live.mp4"
 import hifi from "../../assets/images/hifi_designs.png"
+import td_1 from "../../assets/images/td_1.png"
+import td_2 from "../../assets/images/td_2.png"
+import laundrymate from "../../assets/images/laundrymate.png"
+import spincycles from "../../assets/images/spincycles.png"
+import uclean from "../../assets/images/uclean.png"
 
 export default function TumbledryContent() {
     return (
@@ -58,21 +63,33 @@ export default function TumbledryContent() {
                         <h3 className="text-sm font-semibold tracking-widest text-[#A6A6A6] uppercase">Research</h3>
                         <div className="h-px bg-zinc-800 grow"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
                         <div className="flex flex-col gap-6">
                             <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Digging deeper</h4>
                             <p className="text-zinc-400 text-lg leading-relaxed">
-                                To better understand the current experience, I audited the Tumbledry mobile app and walked through the entire lifecycle of a laundry order - from selecting a service to scheduling pickup and tracking the order.
-                            </p>
+                                To better understand the current experience, I audited the Tumbledry mobile app and walked through the entire lifecycle of a laundry order - from selecting a service to scheduling pickup and tracking the order. This helped uncover friction points, inconsistencies, and areas where the experience could be simplified or made more transparent.                            </p>
                             <p className="text-zinc-400 text-lg leading-relaxed">
-                                I also looked at a few other on-demand laundry services to see how they communicate pricing, order details, and booking confirmations during the scheduling process.
-                            </p>
-                            {/* <blockquote className="border-l-4 border-zinc-700 pl-6 my-4 italic text-zinc-300 text-lg">
-                                "I just want them to take my laundry and bring it back. I don't want to fill out a 5-page form to get a price estimate."
-                            </blockquote> */}
+                                In addition, I explored a few other laundry service apps to understand how similar platforms communicate pricing, order details, and booking confirmations during the scheduling process. Comparing these experiences helped identify common patterns, usability gaps, and opportunities to create a more seamless and trustworthy booking flow.                            </p>
+                            <div className="flex flex-wrap items-center gap-8 pt-8">
+                                {/* Competitor Logos Placeholder */}
+                                <div className="h-20 w-20 flex items-center justify-center ">
+                                    <img src={laundrymate} alt="Competitor Logo 1" className="w-full h-full object-contain rounded-2xl" />
+                                </div>
+                                <div className="h-20 w-20 flex items-center justify-center">
+                                    <img src={spincycles} alt="Competitor Logo 2" className="w-full h-full object-contain rounded-2xl" />
+                                </div>
+                                <div className="h-20 w-20 flex items-center justify-center">
+                                    <img src={uclean} alt="Competitor Logo 3" className="w-full h-full object-contain rounded-2xl" />
+                                </div>
+                            </div>
                         </div>
-                        <div className="rounded-2xl overflow-hidden bg-zinc-800 border border-zinc-700">
-                            <img src={moodboard} alt="Research Moodboard" className="w-full h-full object-cover opacity-80" />
+                        <div className="flex flex-row gap-6">
+                            <div className="rounded-2xl overflow-hidden bg-zinc-800 border border-zinc-700">
+                                <img src={td_2} alt="Research Moodboard 1" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="rounded-2xl overflow-hidden bg-zinc-800 border border-zinc-700">
+                                <img src={td_1} alt="Research Moodboard 2" className="w-full h-full object-contain" />
+                            </div>
                         </div>
                     </div>
                 </div>
