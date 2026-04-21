@@ -17,7 +17,12 @@ export default function SpotifyCard() {
     ];
 
     return (
-        <div className="relative flex flex-col justify-between rounded-2xl p-6 w-[500px] gap-6 overflow-hidden bg-[#EDFCF3]">
+        <a
+            href="https://open.spotify.com/user/tab1twa8qs27vu9tdprv3o58l"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex flex-col justify-between rounded-2xl p-6 w-[500px] gap-6 overflow-hidden bg-[#EDFCF3] cursor-pointer group block"
+        >
             {/* Top row */}
             <div className="flex justify-between items-center w-full gap-4">
                 {/* Left: Logo + text */}
@@ -52,14 +57,11 @@ export default function SpotifyCard() {
             </div>
 
             {/* Bottom: Spotify link */}
-            <a
-                href="https://open.spotify.com/user/tab1twa8qs27vu9tdprv3o58l"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="self-stretch text-[#007BFF] text-base font-medium leading-[30px] font-dm-sans hover:underline"
+            <span
+                className="self-stretch text-[#007BFF] text-base font-medium leading-[30px] font-dm-sans group-hover:underline"
             >
                 Spotify ↗
-            </a>
-        </div>
+            </span>
+        </a>
     );
 }

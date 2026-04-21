@@ -17,8 +17,12 @@ export default function YTCard() {
     ];
 
     return (
-        <div className="relative flex flex-col justify-between rounded-2xl p-6 w-[500px] gap-6 bg-[#FFF0F0] overflow-hidden">
-
+        <a
+            href="https://www.youtube.com/@alweece"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex flex-col justify-between rounded-2xl p-6 w-[500px] gap-6 bg-[#FFF0F0] overflow-hidden cursor-pointer group block"
+        >
             {/* Top Section */}
             <div className="flex justify-between items-center w-full">
 
@@ -55,14 +59,9 @@ export default function YTCard() {
             </div>
 
             {/* Bottom Link */}
-            <a
-                href="https://www.youtube.com/@alweece"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#007BFF] text-base font-medium hover:underline"
-            >
+            <span className="text-[#007BFF] text-base font-medium group-hover:underline">
                 YouTube ↗
-            </a>
-        </div>
+            </span>
+        </a>
     );
 }

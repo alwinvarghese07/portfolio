@@ -36,7 +36,7 @@ export default function Footer() {
                             </a>
                             <a
                                 target="_blank"
-                                href="https://x.com" className="w-10 h-10 flex items-center justify-center transition-transform hover:scale-110">
+                                href="https://www.instagram.com/alweece/" className="w-10 h-10 flex items-center justify-center transition-transform hover:scale-110">
                                 <img src={xIcon} alt="X" className="w-10 h-10" />
                             </a>
                         </div>

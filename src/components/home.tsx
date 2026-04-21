@@ -1,27 +1,83 @@
-import BentoGrid from "./BentoGrid";
+import { motion } from "motion/react";
 
 export default function HomeSection() {
     return (
-        <div className="pt-[80px] pb-[60px] h-full flex flex-col w-full gap-20">
+        <div className="pt-[80px] flex flex-col w-full gap-24">
 
             <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10 md:gap-20">
-                <div className="font-semibold w-full md:w-[60%] font-['Bitcount_Prop_Single'] flex flex-col text-white">
-                    <h1 className="text-4xl md:text-[64px] leading-tight">Hey there👋🏼, I'm Alwin.<br className="hidden md:block"></br></h1>
-                    <h1 className="text-3xl md:text-[58px] leading-tight opacity-90">UI/UX Designer creating intuitive digital products.</h1>
-                </div>
-                <div className="w-full md:w-[40%] h-[250px] md:h-[350px]">
-                    <BentoGrid />
+                <div className="font-semibold w-full font-['Bitcount_Prop_Single'] flex flex-col gap-4 md:gap-6 text-white">
+
+                    {/* HERO LINE 1 */}
+                    <motion.div
+                        initial={{ y: 80, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 1.2,
+                            ease: [0.16, 1, 0.3, 1],
+                            delay: 0.1
+                        }}
+                        className="text-4xl sm:text-5xl md:text-[68px] lg:text-[76px] leading-[1.1] tracking-tight bg-clip-text"
+                    >
+                        Hey there👋🏼, I'm Alwin.
+                    </motion.div>
+
+                    {/* HERO LINE 2 */}
+                    <motion.div
+                        initial={{ y: 80, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 1.4,
+                            ease: [0.16, 1, 0.3, 1],
+                            delay: 0.25
+                        }}
+                        className="text-3xl sm:text-4xl md:text-[54px] lg:text-[62px] leading-[1.2] text-[#d4d4d4] opacity-90"
+                    >
+                        Designing digital products that just make sense..
+                    </motion.div>
+
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 md:gap-40">
-                <div className="flex flex-col gap-2">
-                    <p className="font-light text-[12px] md:text-[14px] text-[#c7c7c7]">📍 CURRENTLY IN</p>
-                    <p className="font-medium text-[16px] md:text-[20px] text-white">Bengaluru</p>
-                </div>
-                <div className="flex flex-col gap-2">
-                    <p className="font-light text-[12px] md:text-[14px] text-[#c7c7c7]">💻 DESIGNING AT</p>
-                    <p className="font-medium text-[16px] md:text-[20px] text-white">ITProfound Inc.</p>
-                </div>
+
+            <div className="flex flex-col md:flex-row gap-10 md:gap-40 pt-4">
+
+                {/* LOCATION */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 1,
+                        delay: 0.6,
+                        ease: [0.16, 1, 0.3, 1]
+                    }}
+                    className="flex flex-col gap-2 md:gap-3"
+                >
+                    <p className="font-medium text-[15px] md:text-[15px] text-[#a1a1a1] tracking-[0.10 rem]">
+                        📍 CURRENTLY IN
+                    </p>
+                    <p className="font-semibold text-[16px] md:text-[20px] text-white/90">
+                        Bengaluru, IN
+                    </p>
+                </motion.div>
+
+                {/* COMPANY */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 1,
+                        delay: 0.75,
+                        ease: [0.16, 1, 0.3, 1]
+                    }}
+                    className="flex flex-col gap-2 md:gap-3"
+                >
+                    <p className="font-medium text-[15px] md:text-[15px] text-[#a1a1a1] tracking-[0.10 rem]">
+                        💻 DESIGNING AT
+                    </p>
+                    <p className="font-semibold text-[16px] md:text-[20px] text-white/90">
+                        ITProfound Inc.
+                    </p>
+                </motion.div>
+
             </div>
 
         </div>

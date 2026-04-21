@@ -17,7 +17,7 @@ export default function Home() {
                         <div className="h-auto md:h-[10vh]">
                             <Navbar />
                         </div>
-                        <div className="h-auto md:h-[60vh] py-10 md:py-0">
+                        <div className="h-auto md:h-[60vh] py-10 md:py-0 flex items-center">
                             <HomeSection />
                         </div>
                         <div className="h-auto md:h-[40vh] py-10 md:py-0">
