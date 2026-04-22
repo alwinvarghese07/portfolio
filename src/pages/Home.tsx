@@ -53,17 +53,20 @@ export default function Home() {
                 </MainLayout>
             </section>
 
-            <section className="sticky top-0 z-20 min-h-screen bg-black w-full py-20 -mt-[100vh]">
-                <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-                    <div className="custom-grain-layer"></div>
-                </div>
-                <div className="flex flex-col items-center relative z-10 w-full">
-                    <ProjectsSection />
-                    <Footer />
-                </div>
-            </section>
+            <div className="relative z-20 -mt-[100vh]">
+                <section className="sticky top-0 min-h-screen bg-black w-full py-20">
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <div className="custom-grain-layer"></div>
+                    </div>
+                    <div className="flex flex-col items-center relative z-10 w-full">
+                        <ProjectsSection />
+                        <Footer />
+                    </div>
+                </section>
 
-            <div className="h-[200vh] bg-transparent pointer-events-none" />
+                {/* Spacer to allow the sticky section to remain fixed for exactly 100vh before scrolling */}
+                <div className="h-[100vh] bg-transparent pointer-events-none" />
+            </div>
         </div>
     );
 }
