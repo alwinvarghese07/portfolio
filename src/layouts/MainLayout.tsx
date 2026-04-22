@@ -1,7 +1,10 @@
+import CustomCursor from "../components/CustomCursor";
+
 export default function MainLayout({ children }: any) {
     return (
         <div className="w-full relative">
-            <div className="w-full px-[120px] py-[40px]">
+            <CustomCursor />
+            <div className="w-full px-6 md:px-[100px] lg:px-[250px] py-[40px]">
                 {children}
             </div>
         </div>
