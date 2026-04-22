@@ -65,7 +65,7 @@ export default function Home() {
                 </section>
 
                 {/* Spacer to allow the sticky section to remain fixed for exactly 100vh before scrolling */}
-                <div className="h-[100vh] bg-transparent pointer-events-none" />
+                <div className="h-screen bg-transparent pointer-events-none" />
             </div>
         </div>
     );

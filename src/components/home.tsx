@@ -53,7 +53,7 @@ export default function HomeSection() {
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-10 md:gap-40 pt-4">
+            <div className="flex flex-row gap-10 md:gap-40 pt-4">
 
                 {/* LOCATION */}
                 <motion.div

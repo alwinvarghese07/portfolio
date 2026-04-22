@@ -33,7 +33,7 @@ export default function Exp() {
                         }
                     }
                 }}
-                className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10"
+                className="flex flex-row justify-between items-center gap-8 md:gap-10"
             >
 
                 <motion.img
