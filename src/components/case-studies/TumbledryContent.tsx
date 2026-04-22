@@ -1,8 +1,9 @@
 import DribbbleShot from "../../assets/videos/Dribbble-shot.mp4";
 import ShowreelVideo from "../../assets/videos/Showreel-Grid-Mobile-[remix] (1).mp4";
 import moodboard from "../../assets/images/moodboard.png";
-import userFlow from "../../assets/images/userflows.png";
-import lowFidelity from "../../assets/images/lowfidelity.png";
+import orders from "../../assets/images/order_flow.jpg";
+import myorders from "../../assets/images/myorders_flow.jpg";
+import lowFidelity from "../../assets/images/sketches.png";
 import highFidelity from "../../assets/images/highfidelity.png";
 import Reveal from "../reveal";
 import notif from "../../assets/videos/notif.mp4"
@@ -41,7 +42,7 @@ export default function TumbledryContent() {
             </Reveal>
             {/* UNDERSTANDING THE CURRENT EXPERIENCE */}
             <Reveal>
-                <div className="flex flex-col md:flex-row items-start md:items-start bg-zinc-900/30 p-10 md:p-14 rounded-4xl border border-zinc-800/30">
+                <div className="flex flex-col md:flex-row items-start md:items-start bg-[#1c1c1c] p-10 md:p-14 rounded-4xl border border-zinc-800/30">
                     <h2 className="text-4xl md:text-5xl font-['Bitcount_Prop_Single'] text-white leading-tight">
                         The Current Experience
                     </h2>
@@ -99,15 +100,15 @@ export default function TumbledryContent() {
             <Reveal>
                 <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Key Insights</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10">
-                    <div className="p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800/50 flex flex-col gap-4">
+                    <div className="p-8 rounded-3xl bg-[#1c1c1c] border border-zinc-800/50 flex flex-col gap-4">
                         <h5 className="text-xl font-bold text-zinc-100">Price Clarity</h5>
                         <p className="text-zinc-400">Users need to understand the expected cost before scheduling a pickup. When pricing is hidden or difficult to find, it creates uncertainty during the booking decision.</p>
                     </div>
-                    <div className="p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800/50 flex flex-col gap-4">
+                    <div className="p-8 rounded-3xl bg-[#1c1c1c] border border-zinc-800/50 flex flex-col gap-4">
                         <h5 className="text-xl font-bold text-zinc-100">Service Details</h5>
                         <p className="text-zinc-400">The booking flow does not capture important details such as garment type or quantity. Without this information, users may not fully understand what they are requesting from the service.</p>
                     </div>
-                    <div className="p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800/50 flex flex-col gap-4">
+                    <div className="p-8 rounded-3xl bg-[#1c1c1c] border border-zinc-800/50 flex flex-col gap-4">
                         <h5 className="text-xl font-bold text-zinc-100">Booking Confirmation</h5>
                         <p className="text-zinc-400">After selecting a pickup slot, tapping “Schedule Pickup” immediately places the order. Users typically expect a confirmation or review step before committing to a service booking.</p>
                     </div>
@@ -126,12 +127,24 @@ export default function TumbledryContent() {
                         <p className="text-zinc-400 text-lg leading-relaxed mt-4">
                             With the key insights identified, the next step was to explore ways to simplify the booking experience while improving transparency for users. Early wireframes focused on restructuring the scheduling flow, surfacing pricing at the right moment, capturing essential service details such as garment types, and introducing a confirmation step before placing an order.                        </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="rounded-3xl overflow-hidden bg-zinc-900">
-                            <img src={userFlow} alt="User Flow" className="w-full h-full object-cover" />
+                    <div className="flex flex-col gap-16 mt-4">
+                        <div className="flex flex-col gap-4">
+                            <h5 className="text-2xl font-semibold text-zinc-100 font-['Inter'] tracking-wide">Order Flow</h5>
+                            <div className="rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/50">
+                                <img src={orders} alt="Order Flow" className="w-full h-full object-cover" />
+                            </div>
                         </div>
-                        <div className="rounded-3xl overflow-hidden bg-zinc-900">
-                            <img src={lowFidelity} alt="Low Fidelity" className="w-full h-full object-cover opacity-80" />
+                        <div className="flex flex-col gap-4">
+                            <h5 className="text-2xl font-semibold text-zinc-100 font-['Inter'] tracking-wide">My Orders Flow</h5>
+                            <div className="rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/50">
+                                <img src={myorders} alt="My Orders Flow" className="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <h5 className="text-2xl font-semibold text-zinc-100 font-['Inter'] tracking-wide">Sketches</h5>
+                            <div className="rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/50">
+                                <img src={lowFidelity} alt="Sketches" className="w-full h-full object-cover" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,7 +184,7 @@ export default function TumbledryContent() {
                 {/* Moment 1 */}
                 <Reveal>
                     <div className="flex flex-col md:flex-row items-stretch gap-8 group">
-                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-zinc-900/40 rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
+                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-[#1c1c1c] rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
                             <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-white">Booking Experience</h4>
                             <p className="text-lg text-zinc-400 leading-relaxed">
                                 A clearer booking flow that gives users visibility into pricing and order details before scheduling a pickup.
@@ -191,7 +204,7 @@ export default function TumbledryContent() {
                 {/* Moment 2 */}
                 <Reveal>
                     <div className="flex flex-col md:flex-row-reverse items-stretch gap-8 group">
-                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-zinc-900/40 rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
+                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-[#1c1c1c] rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
                             <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-white">Live Tracking</h4>
                             <p className="text-lg text-zinc-400 leading-relaxed">
                                 A simple tracking experience that keeps users informed about the progress of their laundry order.
@@ -212,7 +225,7 @@ export default function TumbledryContent() {
                 {/* Moment 3 */}
                 <Reveal>
                     <div className="flex flex-col md:flex-row items-stretch gap-8 group">
-                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-zinc-900/40 rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
+                        <div className="md:w-5/12 flex flex-col justify-center gap-6 p-8 md:p-12 bg-[#1c1c1c] rounded-4xl border border-transparent group-hover:bg-zinc-900/60 group-hover:border-zinc-700/50 transition-all duration-500">
                             <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-white">Notifications</h4>
                             <p className="text-lg text-zinc-400 leading-relaxed">
                                 Timely updates keep users aware of important events without needing to constantly check the app.
@@ -247,12 +260,6 @@ export default function TumbledryContent() {
                 </div>
             </Reveal>
 
-            {/* DISCLAIMER */}
-            <div className="w-full pt-10 text-center border-t border-zinc-800">
-                <p className="text-zinc-500 text-sm font-light">
-                    This project is an independent UX exploration and is not affiliated with Tumbledry.
-                </p>
-            </div>
 
 
         </div>

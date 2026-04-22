@@ -44,7 +44,7 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="w-full mt-10 flex justify-center">
+                <div className="w-full mt-24 flex justify-center">
                     <span className="text-[14px] text-black/30 font-medium font-['Inter']">
                         © Alwin Varghese Saji, 2026
                     </span>

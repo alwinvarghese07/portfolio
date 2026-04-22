@@ -18,7 +18,22 @@ export default function HomeSection() {
                         }}
                         className="text-4xl sm:text-5xl md:text-[68px] lg:text-[76px] leading-[1.1] tracking-tight bg-clip-text"
                     >
-                        Hey there👋🏼, I'm Alwin.
+                        Hey there
+                        <motion.span
+                            style={{ display: "inline-block", originX: 0.7, originY: 0.7 }}
+                            initial={{ rotate: 0 }}
+                            animate={{ rotate: [0, 10, -6, 8, 0] }}
+                            transition={{
+                                duration: 1,
+                                ease: [0.4, 0, 0.2, 1],
+                                delay: 0.8,
+                                repeat: Infinity,
+                                repeatDelay: 3
+                            }}
+                        >
+                            👋🏼
+                        </motion.span>
+                        , I'm Alwin.
                     </motion.div>
 
                     {/* HERO LINE 2 */}
