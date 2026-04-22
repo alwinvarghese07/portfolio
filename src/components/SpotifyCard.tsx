@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import React, { useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
+import { useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import spotifyLogo from "../assets/images/spotify.png";
 
 export default function SpotifyCard() {
@@ -10,17 +10,9 @@ export default function SpotifyCard() {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
-    // Magnetic Cursor Values
-    const cursorX = useMotionValue(-100);
-    const cursorY = useMotionValue(-100);
-
     // Ultra-smooth spring physics for breathing life into the card
     const mouseX = useSpring(x, { stiffness: 150, damping: 25 });
     const mouseY = useSpring(y, { stiffness: 150, damping: 25 });
-
-    // Snappy but soft spring for the cursor following
-    const cursorSpringX = useSpring(cursorX, { stiffness: 200, damping: 20 });
-    const cursorSpringY = useSpring(cursorY, { stiffness: 200, damping: 20 });
 
     // Rotate matrix based on distance from center
     const rotateX = useTransform(mouseY, [-150, 150], [6, -6]);
@@ -44,32 +36,10 @@ export default function SpotifyCard() {
         // Center-offset for 3D tilts
         x.set(localX - centerX);
         y.set(localY - centerY);
-
-        // Magnetic drag magic: smoothly pulls the cursor toward the geometric center 
-        // by reducing its distance from the center by 15%
-        const pullStrength = 0.15;
-        const magnetX = localX - (localX - centerX) * pullStrength;
-        const magnetY = localY - (localY - centerY) * pullStrength;
-
-        cursorX.set(magnetX);
-        cursorY.set(magnetY);
     };
 
-    const handleMouseEnter = (e: ReactMouseEvent<HTMLAnchorElement>) => {
+    const handleMouseEnter = () => {
         setIsHovered(true);
-        if (!cardRef.current) return;
-
-        const rect = cardRef.current.getBoundingClientRect();
-        const localX = e.clientX - rect.left;
-        const localY = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        // Instantly snap cursor to avoid "fly-in" glitches, while still applying magnetic math
-        const pullStrength = 0.15;
-        cursorX.set(localX - (localX - centerX) * pullStrength);
-        cursorY.set(localY - (localY - centerY) * pullStrength);
-
         document.body.classList.add('hide-custom-cursor');
     };
 
@@ -117,7 +87,7 @@ export default function SpotifyCard() {
         >
             {/* Soft Ambient Breathing Glow / Gradient Shift */}
             <div
-                className={`absolute inset-0 bg-gradient-to-tr from-white/60 via-transparent to-white/10 transition-opacity duration-700 pointer-events-none rounded-3xl ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute inset-0 bg-linear-to-tr from-white/60 via-transparent to-white/10 transition-opacity duration-700 pointer-events-none rounded-3xl ${isHovered ? 'opacity-100' : 'opacity-0'}`}
             />
 
             {/* Top row */}

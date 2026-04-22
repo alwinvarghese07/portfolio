@@ -1,10 +1,6 @@
-import DribbbleShot from "../../assets/videos/Dribbble-shot.mp4";
-import ShowreelVideo from "../../assets/videos/Showreel-Grid-Mobile-[remix] (1).mp4";
-import moodboard from "../../assets/images/moodboard.png";
 import orders from "../../assets/images/order_flow.jpg";
 import myorders from "../../assets/images/myorders_flow.jpg";
 import lowFidelity from "../../assets/images/sketches.png";
-import highFidelity from "../../assets/images/highfidelity.png";
 import Reveal from "../reveal";
 import notif from "../../assets/videos/notif.mp4"
 import liveTracking from "../../assets/videos/live_tracking.mp4"
