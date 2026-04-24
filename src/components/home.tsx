@@ -33,7 +33,7 @@ export default function HomeSection() {
                         >
                             👋🏼
                         </motion.span>
-                        , I'm Alwin.
+                        , I'm Alwin Varghese.
                     </motion.div>
 
                     {/* HERO LINE 2 */}

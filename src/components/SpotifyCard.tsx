@@ -103,7 +103,7 @@ export default function SpotifyCard() {
                         <span className="text-[#393939] text-xl leading-[24px] font-medium font-['Inter']">
                             No Skips 🎧
                         </span>
-                        <span className="text-[#6d6d6d] text-sm leading-[20px] font-medium font-['Inter'] tracking-wide uppercase">
+                        <span className="text-[#6d6d6d] leading-[20px] font-medium font-['Inter'] tracking-wide">
                             Curated by me
                         </span>
                     </div>

@@ -102,7 +102,7 @@ export default function YTCard() {
                         <span className="text-[#393939] text-xl font-medium font-['Inter']">
                             Tunes by me
                         </span>
-                        <span className="text-[#6d6d6d] text-sm font-medium font-['Inter'] tracking-wide uppercase">
+                        <span className="text-[#6d6d6d] font-medium font-['Inter'] tracking-wide">
                             Originals & remixes
                         </span>
                     </div>
