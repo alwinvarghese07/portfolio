@@ -82,7 +82,7 @@ export default function SpotifyCard() {
                 transformPerspective: 1200,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative flex flex-col justify-between rounded-3xl p-6 md:p-8 w-full md:w-[500px] gap-6 overflow-hidden bg-[#EDFCF3] border border-[#d2f3e0] cursor-none group shadow-sm transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-[#EDFCF3]/60"
+            className="relative flex flex-col justify-between rounded-2xl p-6 md:p-8 w-full md:w-[500px] gap-6 overflow-hidden bg-[#EDFCF3] border border-[#d2f3e0] cursor-none group shadow-sm transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-[#EDFCF3]/60"
         >
             {/* Soft Ambient Breathing Glow / Gradient Shift */}
             <div

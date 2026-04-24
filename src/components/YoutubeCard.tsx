@@ -81,7 +81,7 @@ export default function YTCard() {
             }}
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative flex flex-col justify-between rounded-3xl p-8 w-[500px] gap-6 bg-[#FFF0F0] border border-[#fee2e2] overflow-hidden cursor-none group shadow-sm transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-[#FFF0F0]/60"
+            className="relative flex flex-col justify-between rounded-2xl p-8 w-[500px] gap-6 bg-[#FFF0F0] border border-[#fee2e2] overflow-hidden cursor-none group shadow-sm transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-[#FFF0F0]/60"
         >
             {/* Soft Ambient Breathing Glow */}
             <div
