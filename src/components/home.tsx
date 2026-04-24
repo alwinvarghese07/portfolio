@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function HomeSection() {
     return (
-        <div className="pt-10 md:pt-[80px] flex flex-col w-full gap-16 md:gap-20 px-4">
+        <div className="pt-4 md:pt-[80px] flex flex-col w-full gap-8 md:gap-20 px-4">
 
             <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10 md:gap-20">
                 <div className="font-semibold w-full font-['Bitcount_Prop_Single'] flex flex-col gap-4 md:gap-6 text-white">
@@ -16,7 +16,7 @@ export default function HomeSection() {
                             ease: [0.16, 1, 0.3, 1],
                             delay: 0.1
                         }}
-                        className="text-4xl md:text-[68px] lg:text-[76px] leading-[1.1] tracking-tight bg-clip-text"
+                        className="text-4xl sm:text-3xl md:text-[68px] lg:text-[76px] leading-[1.1] tracking-tight bg-clip-text"
                     >
                         Hey there
                         <motion.span

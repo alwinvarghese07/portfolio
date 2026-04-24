@@ -9,20 +9,26 @@ import { motion } from "motion/react";
 export default function Home() {
     return (
         <div className="relative bg-black">
-            <section className="relative z-30 bg-black min-h-screen md:h-screen md:overflow-hidden shadow-[0_15px_40px_-5px_rgba(255,255,255,0.15)] rounded-b-[40px] md:rounded-b-[20px]">
+            <section className="relative z-30 bg-black h-dvh md:h-screen overflow-hidden shadow-[0_15px_40px_-5px_rgba(255,255,255,0.15)] rounded-b-[40px] md:rounded-b-[20px]">
                 <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
                     <div className="custom-grain-layer"></div>
                 </div>
                 <MainLayout>
-                    <div className="flex flex-col min-h-screen md:h-screen md:overflow-hidden relative">
-                        <div className="h-auto md:h-[10vh]">
+                    <div className="flex flex-col h-full relative">
+                        <div className="shrink-0">
                             <Navbar />
                         </div>
-                        <div className="h-auto md:h-[60vh] py-10 md:py-0 flex items-center">
-                            <HomeSection />
-                        </div>
-                        <div className="h-auto md:h-[40vh] py-10 md:py-0 pb-20 md:pb-0">
-                            <Exp />
+
+                        <div className="flex-1 flex flex-col md:block">
+                            <div className="h-full md:h-[60vh] flex items-center">
+                                <HomeSection />
+                            </div>
+
+                            <div className="grow md:hidden"></div>
+
+                            <div className="h-auto md:h-[40vh] py-10 md:py-0 pb-12 md:pb-0">
+                                <Exp />
+                            </div>
                         </div>
 
                         {/* Premium Subtle Scroll Indicator */}

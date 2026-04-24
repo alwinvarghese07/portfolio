@@ -16,7 +16,7 @@ export default function About() {
                 </div>
 
                 <MainLayout>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col px-4">
 
                         {/* NAVBAR */}
                         <div className="h-[10vh]">
@@ -24,7 +24,7 @@ export default function About() {
                         </div>
 
                         {/* HERO SECTION */}
-                        <div className="py-20 flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
+                        <div className="md:pt-20 flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
 
                             {/* IMAGE */}
                             <motion.div
@@ -61,7 +61,7 @@ export default function About() {
                                         delay: 0.35
                                     }}
                                 >
-                                    <span className="text-sm font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-[64px] leading-[100%] tracking-[1px]">
+                                    <span className="font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-4xl md:text-[64px] leading-[100%] tracking-[1px]">
                                         A bit about me
                                     </span>
                                 </motion.div>
@@ -79,7 +79,7 @@ export default function About() {
                                             }
                                         }
                                     }}
-                                    className="flex flex-col gap-6 text-[18px] text-white/70 font-['Inter'] leading-relaxed font-light"
+                                    className="flex flex-col gap-6 text-sm md:text-lg text-white/70 font-['Inter'] leading-relaxed font-light"
                                 >
                                     {[
                                         "I'm Alwin Varghese Saji, a UI/UX designer from India and a Computer Science undergrad, focused on designing clear, practical digital experiences.",
@@ -122,7 +122,7 @@ export default function About() {
                                 }}
                                 className="mb-[60px]"
                             >
-                                <span className="text-sm font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-[64px] tracking-[1px]">
+                                <span className="font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-4xl md:text-[64px] tracking-[1px]">
                                     Outside of design
                                 </span>
                             </motion.div>
@@ -139,7 +139,7 @@ export default function About() {
                                         }
                                     }
                                 }}
-                                className="flex flex-row gap-10 justify-center items-center"
+                                className="flex flex-col md:flex-row gap-10 justify-center items-center"
                             >
                                 <motion.div
                                     variants={{
@@ -153,6 +153,7 @@ export default function About() {
                                             }
                                         }
                                     }}
+                                    className="w-full"
                                 >
                                     <SpotifyCard />
                                 </motion.div>
@@ -169,13 +170,13 @@ export default function About() {
                                             }
                                         }
                                     }}
+                                    className="w-full"
                                 >
                                     <YTCard />
                                 </motion.div>
                             </motion.div>
 
                         </div>
-
                         <div>
                             <Footer1 />
                         </div>
