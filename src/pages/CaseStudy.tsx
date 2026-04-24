@@ -66,7 +66,7 @@ export default function CaseStudy() {
 
             <CustomCursor />
             <div className="w-full min-h-screen flex flex-col bg-[#0E0E0E] text-white relative">
-                <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 mt-10 flex flex-col gap-10 grow">
+                <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-6 md:px-8 mt-6 md:mt-10 flex flex-col gap-6 md:gap-10 grow">
                     <Navbar />
                     {/* Header */}
                     <div className="flex flex-col gap-6 max-w-4xl">
@@ -81,7 +81,7 @@ export default function CaseStudy() {
                                 {data.title}
                             </h1>
                             {data.subtitle && (
-                                <p className="text-xl md:text-2xl text-zinc-400 mt-2 font-medium tracking-wide">
+                                <p className="text-lg md:text-xl  text-zinc-400 mt-2 font-medium tracking-wide">
                                     {data.subtitle}
                                 </p>
                             )}
@@ -100,7 +100,7 @@ export default function CaseStudy() {
                     </div>
 
                     {/* Media Hero */}
-                    <div className="w-full mt-12 rounded-[2.5rem] overflow-hidden aspect-video relative bg-zinc-900 border border-zinc-800/50 shadow-2xl">
+                    <div className="w-full mt-6 md:mt-4 rounded-[20px] overflow-hidden aspect-video relative bg-zinc-900 border border-zinc-800/50 shadow-2xl">
                         {id === "tumbledry" && data.mediaUrl ? (
                             <video
                                 src={data.mediaUrl}
@@ -120,20 +120,19 @@ export default function CaseStudy() {
 
                     {/* Content Section */}
                     {id === "wander" ? (
-                        <div className="mt-16 mb-24 w-full">
+                        <div className="mt-2 md:mt-10 mb-12 md:mb-24 w-full">
                             <WanderContent />
                         </div>
                     ) : id === "tumbledry" ? (
-                        <div className="mt-16 mb-24 w-full">
+                        <div className="mt-2 md:mt-10 mb-12 md:mb-24 w-full">
                             <TumbledryContent />
                         </div>
                     ) : (
-                        <div className="mt-16 mb-24 flex flex-col gap-8 w-full max-w-3xl">
+                        <div className="mt-4 md:mt-16 flex flex-col gap-8 w-full max-w-3xl">
                             <h2 className="text-3xl font-['Bitcount_Prop_Single']">Overview</h2>
                             <p className="text-lg text-zinc-300 leading-relaxed">
                                 {data.content}
                             </p>
-
                         </div>
                     )}
                 </div>

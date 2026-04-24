@@ -20,7 +20,7 @@ export default function ProjectCard({
     const CardContent = (
         <>
             {/* 1. Media Container */}
-            <div className="aspect-video w-full bg-[#141414] rounded-[32px] overflow-hidden relative border border-white/5 shadow-2xl">
+            <div className="aspect-video w-full bg-[#141414] rounded-[20px] overflow-hidden relative border border-white/5 shadow-2xl">
                 {mediaUrl ? (
                     isVideo ? (
                         <video
@@ -35,7 +35,7 @@ export default function ProjectCard({
                         <img
                             src={mediaUrl}
                             alt={title}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 "
                         />
                     )
                 ) : (

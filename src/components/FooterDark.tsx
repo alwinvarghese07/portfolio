@@ -4,22 +4,22 @@ import xIcon from "../assets/images/insta.png";
 
 export default function Footer() {
     return (
-        <footer className="w-full mt-20 pt-10 border-t border-[#464646]">
-            <div className="max-w-[1400px] mx-auto px-4">
+        <footer className="w-full mt-10 md:mt-20 pt-10 border-t border-[#464646]">
+            <div className="max-w-[1400px] mx-auto px-8">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-10 mt-10">
                     {/* Left side */}
                     <div className="flex flex-col gap-4">
-                        <h2 className="text-[32px] font-bold text-white font-['Inter'] leading-tight">
+                        <h2 className="text-[24px] md:text-[32px] font-bold text-white font-['Inter'] leading-tight">
                             Glad you made it this far.
                         </h2>
-                        <p className="text-[18px] text-white/75 font-['Inter']">
+                        <p className="text-[14px] md:text-[18px] text-white/75 font-['Inter']">
                             Hope something here sparked an idea or at least left you a little curious.
                         </p>
                     </div>
 
                     {/* Right side */}
-                    <div className="flex flex-col items-end gap-6 text-right">
-                        <span className="text-[18px] text-white/75 font-['Inter']">
+                    <div className="flex flex-col items-start md:items-end gap-6 text-left md:text-right">
+                        <span className="text-[14px] md:text-[18px] text-white/75 font-['Inter']">
                             Let's keep the conversation going.
                         </span>
                         <div className="flex gap-6 items-center">
@@ -44,8 +44,8 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="w-full mt-24 flex justify-center mb-12">
-                    <span className="text-[14px] text-white/75 font-medium font-['Inter']">
+                <div className="w-full mt-16 md:mt-24 mb-16 flex justify-center">
+                    <span className="text-[12px] md:text-[14px] text-white/75 font-medium font-['Inter']">
                         © Alwin Varghese Saji, 2026
                     </span>
                 </div>

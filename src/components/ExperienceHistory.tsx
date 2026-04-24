@@ -7,7 +7,7 @@ export default function ExperienceHistory() {
 
     return (
         <div className="w-full flex flex-col">
-            <div className="mb-[40px]">
+            <div className="mb-[6px] md:mb-[40px]">
                 <span className="text-4xl md:text-[64px] font-bold text-[#ffffff] font-['Bitcount_Prop_Single'] tracking-[1px]">
                     Experience
                 </span>

@@ -4,7 +4,7 @@ import itpro from "../assets/images/itpro.png";
 
 export default function Exp() {
     return (
-        <div className="flex flex-col justify-center h-full items-center w-full gap-8">
+        <div className="flex flex-col justify-center h-full items-center w-full gap-10 md:gap-14 px-8">
 
             {/* Heading */}
             <motion.div
@@ -15,7 +15,7 @@ export default function Exp() {
                     ease: [0.16, 1, 0.3, 1],
                     delay: 0.4
                 }}
-                className="font-['Inter'] font-medium text-xl md:text-[28px] text-[#c7c7c7] text-center"
+                className="font-['Bitcount_Prop_Single'] font-medium text-xl md:text-[28px] text-[#c7c7c7] text-center"
             >
                 <h1>Experience crafted alongside</h1>
             </motion.div>
@@ -33,13 +33,13 @@ export default function Exp() {
                         }
                     }
                 }}
-                className="flex flex-row justify-between items-center gap-8 md:gap-10"
+                className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20"
             >
 
                 <motion.img
                     src={manormama}
-                    alt="manormama"
-                    className="w-[180px] md:w-[250px]"
+                    alt="Malayala Manorama"
+                    className="w-[200px] md:w-[250px] opacity-80"
                     variants={{
                         hidden: { opacity: 0, y: 30 },
                         visible: {
@@ -55,8 +55,8 @@ export default function Exp() {
 
                 <motion.img
                     src={itpro}
-                    alt="itpro"
-                    className="w-[180px] md:w-[250px]"
+                    alt="ITProfound"
+                    className="w-[200px] md:w-[250px] opacity-80"
                     variants={{
                         hidden: { opacity: 0, y: 30 },
                         visible: {
