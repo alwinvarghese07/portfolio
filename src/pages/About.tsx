@@ -5,6 +5,7 @@ import Footer1 from "../components/FooterDark";
 import profile from "../assets/images/alwin.png";
 import SpotifyCard from "../components/SpotifyCard";
 import YTCard from "../components/YoutubeCard";
+import AboutLayout from "../components/BentoGrid";
 
 export default function About() {
     return (
@@ -21,6 +22,10 @@ export default function About() {
                         {/* NAVBAR */}
                         <div className="h-[10vh]">
                             <Navbar />
+                        </div>
+
+                        <div>
+                            <AboutLayout />
                         </div>
 
                         {/* HERO SECTION */}
@@ -177,6 +182,7 @@ export default function About() {
                             </motion.div>
 
                         </div>
+
                         <div>
                             <Footer1 />
                         </div>
