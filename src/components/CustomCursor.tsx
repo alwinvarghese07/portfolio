@@ -5,7 +5,7 @@ export default function CustomCursor() {
     const cursorRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
-    
+
     // Interaction states
     const [isHoveringBento, setIsHoveringBento] = useState(false);
     const [isClickable, setIsClickable] = useState(false);
@@ -79,12 +79,12 @@ export default function CustomCursor() {
     return (
         <div
             ref={cursorRef}
-            className={`fixed top-0 left-0 pointer-events-none z-[10000] will-change-transform flex items-center justify-center transition-opacity duration-300
+            className={`fixed top-0 left-0 pointer-events-none z-10000 will-change-transform flex items-center justify-center transition-opacity duration-300
                 ${isVisible ? 'opacity-100' : 'opacity-0'}
             `}
         >
             {/* 1. ORIGINAL ROUND CURSOR (Visible in general areas) */}
-            <div 
+            <div
                 className={`w-8 h-8 -ml-4 -mt-4 transition-all duration-300 flex items-center justify-center
                     ${(isHoveringBento || isClickable) ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
                 `}
@@ -96,23 +96,23 @@ export default function CustomCursor() {
             {/* 2. BLUE PILL CURSOR (Visible on Bento items) */}
             <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ 
+                animate={{
                     opacity: isHoveringBento ? 1 : 0,
                     scale: isHoveringBento ? 1 : 0.5
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="absolute flex flex-col items-start"
-                style={{ 
+                style={{
                     left: 0,
                     top: 0
                 }}
             >
                 {/* Pointer Triangle (Tip is at 0,0) */}
-                <div 
-                    className="w-4 h-4 bg-[#0066FF] mb-[-4px] ml-1" 
+                <div
+                    className="w-4 h-4 bg-[#0066FF] mb-[-4px] ml-1"
                     style={{ clipPath: 'polygon(0% 0%, 100% 100%, 0% 100%)', transform: 'rotate(-15deg)' }}
                 ></div>
-                
+
                 {/* Text Pill */}
                 <div className="bg-[#0066FF] rounded-full px-4 py-2 shadow-2xl border border-white/10 flex items-center gap-2">
                     <span className="text-white text-xs md:text-sm font-semibold whitespace-nowrap select-none">

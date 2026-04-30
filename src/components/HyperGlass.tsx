@@ -45,7 +45,7 @@ const HyperGlass: React.FC = () => {
             className="relative w-full h-full flex items-center justify-center p-10 cursor-pointer group select-none"
         >
             {/* 1. SOLID GLASS BLOCK CORE */}
-            <div className="absolute inset-0 rounded-xl bg-white/[0.02] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.6)] border border-white/10">
+            <div className="absolute inset-0 rounded-xl bg-white/2 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.6)] border border-white/10">
                 {/* 2. INTERNAL REFRACTION LAYER (Distorts background) */}
                 <div className="absolute inset-0 rounded-xl backdrop-blur-[30px] backdrop-saturate-[1.8] pointer-events-none">
                     <div className="absolute inset-0 via-transparent to-black/20"></div>
@@ -53,22 +53,22 @@ const HyperGlass: React.FC = () => {
 
                 {/* 3. CHROMATIC ABERRATION EDGES */}
                 <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 border-t border-red-500/10 blur-[1px] translate-x-[-1px]"></div>
-                    <div className="absolute inset-0 border-b border-blue-500/10 blur-[1px] translate-x-[1px]"></div>
+                    <div className="absolute inset-0 border-t border-red-500/10 blur-[1px] -translate-x-1"></div>
+                    <div className="absolute inset-0 border-b border-blue-500/10 blur-[1px] translate-x-1"></div>
                 </div>
 
                 {/* 4. PHYSICAL DEPTH (THICK WALLS) */}
                 <div className="absolute inset-0 rounded-xl pointer-events-none overflow-hidden">
                     {/* Top wall thickness */}
-                    <div className="absolute top-0 inset-x-0 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
+                    <div className="absolute top-0 inset-x-0 h-8 bg-linear-to-b from-white/20 to-transparent"></div>
                     {/* Bottom wall thickness */}
-                    <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div className="absolute bottom-0 inset-x-0 h-10 bg-linear-to-t from-black/40 to-transparent"></div>
                     {/* Side highlights */}
-                    <div className="absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-white/10 to-transparent"></div>
+                    <div className="absolute inset-y-0 left-0 w-6 bg-linear-to-r from-white/10 to-transparent"></div>
                 </div>
 
                 {/* 5. POLISHED RIM HIGHLIGHTS (The "Apple" Look) */}
-                <div className="absolute inset-0 rounded-xl border-[1px] border-white/40 opacity-80 shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]"></div>
+                <div className="absolute inset-0 rounded-xl border border-white/40 opacity-80 shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]"></div>
 
                 {/* 6. DYNAMIC SPECULAR HIGHLIGHT (Follows Mouse) */}
                 <motion.div
@@ -82,7 +82,7 @@ const HyperGlass: React.FC = () => {
                 />
 
                 {/* 7. CAUSTICS & BASE SCATTERING */}
-                <div className="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-white/5 to-transparent blur-2xl pointer-events-none"></div>
+                <div className="absolute bottom-0 inset-x-0 h-1/3 bg-linear-to-t from-white/5 to-transparent blur-2xl pointer-events-none"></div>
                 <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-px bg-white/30 blur-[0.5px] pointer-events-none"></div>
             </div>
 
