@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 import profile from "../assets/images/alwin.png";
 import whiteboard from "../assets/images/whiteboard.png";
 import HyperGlass from "./HyperGlass";
-import Cupboard from "./Cupboard";
 import Shelf from "./Shelf";
+
 
 interface StickyNoteProps {
     text: string;

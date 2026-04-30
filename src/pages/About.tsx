@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import Navbar from "../components/navbar";
 import MainLayout from "../layouts/MainLayout";
 import Footer1 from "../components/FooterDark";
-import profile from "../assets/images/alwin.png";
 import SpotifyCard from "../components/SpotifyCard";
 import YTCard from "../components/YoutubeCard";
 import AboutLayout from "../components/BentoGrid";
