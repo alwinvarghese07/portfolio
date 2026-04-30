@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import figmaIcon from "../assets/images/figma_3d.png";
 import framerIcon from "../assets/images/framer_3d.png";
