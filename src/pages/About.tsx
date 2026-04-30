@@ -6,10 +6,12 @@ import profile from "../assets/images/alwin.png";
 import SpotifyCard from "../components/SpotifyCard";
 import YTCard from "../components/YoutubeCard";
 import AboutLayout from "../components/BentoGrid";
+import CustomCursor from "../components/CustomCursor";
 
 export default function About() {
     return (
         <div className="relative bg-black min-h-screen">
+            <CustomCursor />
             <section className="relative z-30 bg-black overflow-hidden">
 
                 <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -17,7 +19,7 @@ export default function About() {
                 </div>
 
                 <MainLayout>
-                    <div className="flex flex-col px-4">
+                    <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto">
 
                         {/* NAVBAR */}
                         <div className="h-[10vh]">
@@ -29,29 +31,7 @@ export default function About() {
                         </div>
 
                         {/* HERO SECTION */}
-                        <div className="md:pt-20 flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
-
-                            {/* IMAGE */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    duration: 1.2,
-                                    ease: [0.16, 1, 0.3, 1],
-                                    delay: 0.2
-                                }}
-                                className="w-full md:w-[45%]"
-                            >
-                                <div className="aspect-square relative rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-2xl">
-                                    <div className="absolute inset-0 flex items-center justify-center text-white/5">
-                                        [Well… this should have loaded by now]
-                                    </div>
-                                    <img
-                                        src={profile}
-                                        alt="Alwin Varghese Saji"
-                                    />
-                                </div>
-                            </motion.div>
+                        <div className="md:pt-20 flex flex-col gap-8 mt-5">
 
                             {/* TEXT */}
                             <div className="w-full flex flex-col gap-8">

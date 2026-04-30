@@ -14,7 +14,7 @@ export default function Home() {
                     <div className="custom-grain-layer"></div>
                 </div>
                 <MainLayout>
-                    <div className="flex flex-col h-full relative">
+                    <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto h-full relative">
                         <div className="shrink-0">
                             <Navbar />
                         </div>
@@ -64,10 +64,12 @@ export default function Home() {
                     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
                         <div className="custom-grain-layer"></div>
                     </div>
-                    <div className="flex flex-col items-center relative z-10 w-full">
-                        <ProjectsSection />
-                        <Footer />
-                    </div>
+                    <MainLayout>
+                        <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto items-center relative z-10 w-full">
+                            <ProjectsSection />
+                            <Footer />
+                        </div>
+                    </MainLayout>
                 </section>
 
                 {/* Spacer to allow the sticky section to remain fixed for exactly 100vh before scrolling */}

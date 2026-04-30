@@ -9,6 +9,8 @@ import TumbledryContent from "../components/case-studies/TumbledryContent";
 import WanderContent from "../components/case-studies/WanderContent";
 import Wander from "../assets/images/header.png";
 import TumbleDry from "../assets/images/alwin.png";
+import MainLayout from "../layouts/MainLayout";
+
 
 // Dummy content for now based on the project id
 const getCaseStudyData = (id: string | undefined) => {
@@ -62,11 +64,9 @@ export default function CaseStudy() {
     }
 
     return (
-        <div>
-
-            <CustomCursor />
-            <div className="w-full min-h-screen flex flex-col bg-[#0E0E0E] text-white relative">
-                <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-6 md:px-8 mt-6 md:mt-10 flex flex-col gap-6 md:gap-10 grow">
+        <div className="w-full min-h-screen flex flex-col bg-[#0E0E0E] text-white relative">
+            <MainLayout>
+                <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto gap-6 md:gap-10 grow">
                     <Navbar />
                     {/* Header */}
                     <div className="flex flex-col gap-6 max-w-4xl">
@@ -138,7 +138,7 @@ export default function CaseStudy() {
                 </div>
 
                 <FooterDark />
-            </div>
+            </MainLayout>
         </div>
     );
 }
