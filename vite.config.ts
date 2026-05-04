@@ -11,7 +11,7 @@ export default defineConfig({
     ViteImageOptimizer(),
   ],
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
     emptyOutDir: true,
   }
 })
