@@ -60,7 +60,7 @@ export default function Home() {
             </section>
 
             <div className="relative z-20 -mt-[100vh]">
-                <section className="sticky top-0 min-h-screen bg-black w-full py-20">
+                <section className="sticky top-0 min-h-screen bg-black w-full">
                     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
                         <div className="custom-grain-layer"></div>
                     </div>

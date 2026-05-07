@@ -36,7 +36,7 @@ const StickyNote = ({ text, color, rotation, position, constraintsRef }: StickyN
             {/* Subtle Texture Layer */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]"></div>
 
-            <span className="text-[10px] md:text-xs font-bold text-black/60 uppercase tracking-tight leading-tight z-10 pointer-events-none">
+            <span className="text-[10px] md:text-xs font-bold text-black/60 tracking-tight leading-tight z-10 pointer-events-none">
                 {text}
             </span>
 
@@ -114,21 +114,7 @@ export default function BentoGrid() {
                     {/* Content Layer (Sticky Notes) */}
                     <div className="relative z-10 w-full h-full">
                         <StickyNote
-                            text="F1 Sundays"
-                            color="bg-[#FEF9C3]"
-                            rotation={-3}
-                            position={{ x: 40, y: 20 }}
-                            constraintsRef={freezerRef}
-                        />
-                        <StickyNote
-                            text="Mes Que Un Club"
-                            color="bg-[#F8FAFC]"
-                            rotation={2}
-                            position={{ x: 180, y: 30 }}
-                            constraintsRef={freezerRef}
-                        />
-                        <StickyNote
-                            text="2AM Producing"
+                            text="Hey There!"
                             color="bg-[#DCFCE7]"
                             rotation={-2}
                             position={{ x: 20, y: 120 }}
