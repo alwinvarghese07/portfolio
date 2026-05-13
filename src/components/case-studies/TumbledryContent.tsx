@@ -17,7 +17,7 @@ export default function TumbledryContent() {
         <div className="w-full flex flex-col gap-14 md:gap-24 font-['Inter'] text-zinc-200">
             {/* PRODUCT OVERVIEW */}
             <Reveal>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 border-y border-zinc-800/50 backdrop-blur-sm bg-[#1c1c1c] rounded-2xl mt-4">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8 p-8 md:px-20 border-y border-zinc-800/50 backdrop-blur-sm bg-[#1c1c1c] rounded-2xl mt-4 text-center">
                     <div className="flex flex-col gap-2">
                         <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Role</span>
                         <span className="text-md md:text-md md:text-lg text-zinc-100 font-medium">Product Designer</span>
@@ -25,10 +25,6 @@ export default function TumbledryContent() {
                     <div className="flex flex-col gap-2">
                         <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Platform</span>
                         <span className="text-md md:text-lg text-zinc-100 font-medium">iOS & Android App</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Timeline</span>
-                        <span className="text-md md:text-lg text-zinc-100 font-medium">2 Months</span>
                     </div>
                     <div className="flex flex-col gap-2">
                         <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Focus</span>

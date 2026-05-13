@@ -26,50 +26,48 @@ export default function WanderContent() {
                         <div className="h-px bg-zinc-800 grow"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                        <div className="flex flex-col gap-8 md:gap-14 bg-[#1c1c1c] p-8 md:p-14 rounded-4xl border border-zinc-800/30">
-                            <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-8 md:gap-12">
+                        <div className="flex flex-col md:flex-row justify-between gap-8 p-8 md:p-14 bg-[#1c1c1c] rounded-4xl border border-zinc-800/30">
+                            <div className="flex flex-col gap-4 md:w-1/3">
+                                <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Role</h4>
+                                <p className="text-[#D4D4D4] text-md md:text-lg">UI/UX Designer</p>
+                            </div>
+                            <div className="flex flex-col gap-4 md:w-1/3">
+                                <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Responsibilities</h4>
+                                <ul className="flex flex-col gap-1.5 text-[#D4D4D4] text-md md:text-lg">
+                                    <li>UX Research</li>
+                                    <li>Sketching</li>
+                                    <li>UI/UX Design</li>
+                                    <li>Prototyping</li>
+                                </ul>
+                            </div>
+                            <div className="flex flex-col gap-4 md:w-1/3">
+                                <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Tools</h4>
+                                <ul className="flex flex-col gap-4 text-[#D4D4D4] text-md md:text-lg">
+                                    <div className="flex items-center gap-4">
+                                        <img src={figma} alt="Figma" className="w-6" />
+                                        <li>Figma</li>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <img src={miro} alt="Miro" className="w-6" />
+                                        <li>Miro</li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row gap-8 md:gap-14 bg-[#1c1c1c] p-8 md:p-14 rounded-4xl border border-zinc-800/30">
+                            <div className="flex flex-col gap-4 md:w-1/2">
                                 <h4 className="text-2xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Project Description</h4>
                                 <p className="text-[#D4D4D4] leading-relaxed text-md md:text-lg">
                                     Many outdoor enthusiasts struggle to find reliable adventure spots, plan trips efficiently, and connect with like-minded explorers. I designed Wander to simplify this process, offering seamless discovery, trip management, and social connectivity in one intuitive app.
                                 </p>
                             </div>
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 md:w-1/2">
                                 <h4 className="text-2xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Goal</h4>
                                 <p className="text-[#D4D4D4] leading-relaxed text-md md:text-lg">
                                     The goal of Wander is to make outdoor adventure planning effortless by offering personalized recommendations and intuitive trip management. It connects adventurers, helping them explore, plan, and share experiences seamlessly.
                                 </p>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col gap-8 md:gap-10 md:pl-8 p-8 md:p-14 bg-[#1c1c1c] rounded-4xl border border-zinc-800/30">
-                            <div className="flex flex-col gap-4">
-                                <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Timeline</h4>
-                                <p className="text-[#D4D4D4] text-md md:text-lg">1 Month</p>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                <div className="flex flex-col gap-4">
-                                    <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Responsibilities</h4>
-                                    <ul className="flex flex-col gap-1.5 text-[#D4D4D4] text-md md:text-lg">
-                                        <li>UX Research</li>
-                                        <li>Sketching</li>
-                                        <li>UI/UX Design</li>
-                                        <li>Prototyping</li>
-                                    </ul>
-                                </div>
-                                <div className="flex flex-col gap-4">
-                                    <h4 className="text-xl font-bold font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Tools</h4>
-                                    <ul className="flex flex-col gap-4 text-[#D4D4D4] text-md md:text-lg">
-                                        <div className="flex items-center gap-4">
-                                            <img src={figma} alt="Figma" className="w-6" />
-                                            <li>Figma</li>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                            <img src={miro} alt="Miro" className="w-6" />
-                                            <li>Miro</li>
-                                        </div>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
