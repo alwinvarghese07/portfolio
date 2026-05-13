@@ -2,6 +2,7 @@ import React, { useRef, lazy, Suspense } from "react";
 import { motion } from "motion/react";
 import profile from "../assets/images/alwin.webp";
 import whiteboard from "../assets/images/whiteboard.webp";
+import LazyIframe from "./LazyIframe";
 
 const HyperGlass = lazy(() => import("./HyperGlass"));
 const Shelf = lazy(() => import("./Shelf"));
@@ -82,23 +83,24 @@ export default function BentoGrid() {
                     data-cursor="On Loop"
                     className="hidden md:block overflow-hidden rounded-3xl hover:scale-[1.02] transition-transform duration-500 h-[152px] lg:h-full md:col-start-1 md:col-span-2 md:row-start-3 md:row-span-1 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-1"
                 >
-                    <div className="relative w-full h-full overflow-hidden" style={{ minHeight: '152px' }}>
-                        <iframe
-                            src="https://open.spotify.com/embed/playlist/2CcAzDF4uZapVsEA2Xlo1w?utm_source=generator&theme=1"
-                            style={{
-                                border: "0",
-                                position: "absolute",
-                                top: "0",
-                                left: "0",
-                                width: "63.3%",
-                                height: "152px",
-                                transform: "scale(1.58)",
-                                transformOrigin: "top left",
-                            }}
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy"
-                        />
-                    </div>
+                    <LazyIframe
+                        src="https://open.spotify.com/embed/playlist/2CcAzDF4uZapVsEA2Xlo1w?utm_source=generator&theme=1"
+                        className="relative w-full h-full overflow-hidden"
+                        style={{ minHeight: '152px' }}
+                        iframeStyle={{
+                            border: "0",
+                            position: "absolute",
+                            top: "0",
+                            left: "0",
+                            width: "63.3%",
+                            height: "152px",
+                            transform: "scale(1.58)",
+                            transformOrigin: "top left",
+                        }}
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        rootMargin="300px"
+                    />
                 </div>
 
                 {/* 6. FREEZER - Interactive Sticky Notes */}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function CustomCursor() {
     const cursorRef = useRef<HTMLDivElement>(null);
@@ -6,8 +6,6 @@ export default function CustomCursor() {
     const pillCursorRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
     
-    const [isTouchDevice, setIsTouchDevice] = useState(false);
-
     // Interaction states using refs
     const isVisible = useRef(false);
     const isHoveringBento = useRef(false);
@@ -19,12 +17,11 @@ export default function CustomCursor() {
     const cursorPos = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
-        const checkTouch = () => {
-            setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-        };
-        checkTouch();
-
-        if (isTouchDevice) return;
+        const isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        if (isTouchDevice) {
+            if (cursorRef.current) cursorRef.current.style.display = 'none';
+            return;
+        }
 
         const onMouseMove = (e: MouseEvent) => {
             mousePos.current = { x: e.clientX, y: e.clientY };
@@ -109,9 +106,7 @@ export default function CustomCursor() {
             document.removeEventListener('mouseenter', onMouseEnter);
             cancelAnimationFrame(rafId);
         };
-    }, [isTouchDevice]);
-
-    if (isTouchDevice) return null;
+    }, []);
 
     return (
         <div

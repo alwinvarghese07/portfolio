@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import MainLayout from "../layouts/MainLayout";
 import HomeSection from "../components/home";
@@ -9,6 +9,15 @@ import { motion } from "motion/react";
 const ProjectsSection = lazy(() => import("../components/ProjectsSection"));
 
 export default function Home() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <div className="relative bg-black">
             <section className="relative z-30 bg-black h-dvh md:h-screen overflow-hidden shadow-[0_15px_40px_-5px_rgba(255,255,255,0.15)] rounded-b-[40px] md:rounded-b-[20px]">
@@ -41,7 +50,7 @@ export default function Home() {
                             className="absolute bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
                         >
                             <motion.div
-                                animate={{
+                                animate={isMobile ? { y: [0, 8, 0], opacity: [0.6, 1, 0.6] } : {
                                     y: [0, 8, 0],
                                     filter: ["blur(1px)", "blur(0px)", "blur(1px)"]
                                 }}

@@ -106,12 +106,12 @@ const HyperGlass: React.FC = () => {
                                     delay: 0.4
                                 }
                             }}
-                            className="relative group/logo"
+                            className="relative group/logo will-change-transform"
                         >
                             <motion.img
                                 src={figmaIcon}
                                 alt="Figma"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110"
+                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110 will-change-transform"
                                 animate={{
                                     y: [0, -2, 0],
                                     rotate: [-12, -11, -12]
@@ -141,12 +141,12 @@ const HyperGlass: React.FC = () => {
                                     delay: 0.5
                                 }
                             }}
-                            className="relative group/logo"
+                            className="relative group/logo will-change-transform"
                         >
                             <motion.img
                                 src={jiraIcon}
                                 alt="Jira"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110"
+                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110 will-change-transform"
                                 animate={{
                                     y: [0, -2, 0],
                                     rotate: [-5, -6, -5]
@@ -176,12 +176,12 @@ const HyperGlass: React.FC = () => {
                                     delay: 0.8
                                 }
                             }}
-                            className="relative group/logo"
+                            className="relative group/logo will-change-transform"
                         >
                             <motion.img
                                 src={notionIcon}
                                 alt="Notion"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110"
+                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110 will-change-transform"
                                 animate={{
                                     y: [0, -2, 0],
                                     rotate: [-8, -7, -8]
@@ -212,12 +212,12 @@ const HyperGlass: React.FC = () => {
                                     delay: 0.7
                                 }
                             }}
-                            className="relative group/logo"
+                            className="relative group/logo will-change-transform"
                         >
                             <motion.img
                                 src={framerIcon}
                                 alt="Framer"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110"
+                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110 will-change-transform"
                                 animate={{
                                     y: [0, -2, 0],
                                     rotate: [15, 16, 15]
@@ -248,12 +248,12 @@ const HyperGlass: React.FC = () => {
                                     delay: 0.6
                                 }
                             }}
-                            className="relative group/logo"
+                            className="relative group/logo will-change-transform"
                         >
                             <motion.img
                                 src={confluenceIcon}
                                 alt="Confluence"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110"
+                                className="w-12 h-12 md:w-14 md:h-14 object-contain contrast-125 saturate-110 will-change-transform"
                                 animate={{
                                     y: [0, -2, 0],
                                     rotate: [8, 9, 8]
