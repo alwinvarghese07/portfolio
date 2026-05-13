@@ -4,7 +4,8 @@ import Lenis from "@studio-freight/lenis";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CaseStudy from "./pages/CaseStudy";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function ScrollManager() {
   const location = useLocation();
@@ -50,6 +51,7 @@ function ScrollManager() {
         <Route path="/case-study/:id" element={<CaseStudy />} />
       </Routes>
       <Analytics />
+      <SpeedInsights />
     </BrowserRouter >
   );
 }
