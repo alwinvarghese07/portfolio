@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
 import Navbar from "../components/navbar";
 import MainLayout from "../layouts/MainLayout";
 import HomeSection from "../components/home";
 import Exp from "../components/exp";
-import ProjectsSection from "../components/ProjectsSection";
 import Footer from "../components/FooterDark";
 import { motion } from "motion/react";
+
+const ProjectsSection = lazy(() => import("../components/ProjectsSection"));
 
 export default function Home() {
     return (
@@ -66,7 +68,9 @@ export default function Home() {
                     </div>
                     <MainLayout>
                         <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto items-center relative z-10 w-full">
-                            <ProjectsSection />
+                            <Suspense fallback={<div className="h-screen w-full" />}>
+                                <ProjectsSection />
+                            </Suspense>
                             <Footer />
                         </div>
                     </MainLayout>

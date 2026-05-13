@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
-import spotifyLogo from "../assets/images/spotify.png";
+import spotifyLogo from "../assets/images/spotify.webp";
 
 export default function SpotifyCard() {
     const cardRef = useRef<HTMLAnchorElement>(null);

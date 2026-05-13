@@ -1,10 +1,10 @@
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import figmaIcon from "../assets/images/figma3d.png";
-import framerIcon from "../assets/images/miro.png";
-import jiraIcon from "../assets/images/jira_logo.jpg";
-import confluenceIcon from "../assets/images/confluence_logo.jpg";
-import notionIcon from "../assets/images/notion_logo.jpg";
+import figmaIcon from "../assets/images/figma3d.webp";
+import framerIcon from "../assets/images/miro.webp";
+import jiraIcon from "../assets/images/jira_logo.webp";
+import confluenceIcon from "../assets/images/confluence_logo.webp";
+import notionIcon from "../assets/images/notion_logo.webp";
 
 const HyperGlass: React.FC = () => {
     const mouseX = useMotionValue(0);
@@ -45,16 +45,16 @@ const HyperGlass: React.FC = () => {
             className="relative w-full h-full flex items-center justify-center p-10 cursor-pointer group select-none"
         >
             {/* 1. SOLID GLASS BLOCK CORE */}
-            <div className="absolute inset-0 rounded-xl bg-white/2 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.6)] border border-white/10">
+            <div className="absolute inset-0 rounded-xl bg-white/2 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)] border border-white/10 will-change-transform">
                 {/* 2. INTERNAL REFRACTION LAYER (Distorts background) */}
-                <div className="absolute inset-0 rounded-xl backdrop-blur-[30px] backdrop-saturate-[1.8] pointer-events-none">
+                <div className="absolute inset-0 rounded-xl backdrop-blur-xl backdrop-saturate-[1.5] pointer-events-none">
                     <div className="absolute inset-0 via-transparent to-black/20"></div>
                 </div>
 
                 {/* 3. CHROMATIC ABERRATION EDGES */}
                 <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 border-t border-red-500/10 blur-[1px] -translate-x-1"></div>
-                    <div className="absolute inset-0 border-b border-blue-500/10 blur-[1px] translate-x-1"></div>
+                    <div className="absolute inset-0 border-t border-red-500/10 -translate-x-1"></div>
+                    <div className="absolute inset-0 border-b border-blue-500/10 translate-x-1"></div>
                 </div>
 
                 {/* 4. PHYSICAL DEPTH (THICK WALLS) */}
@@ -68,22 +68,22 @@ const HyperGlass: React.FC = () => {
                 </div>
 
                 {/* 5. POLISHED RIM HIGHLIGHTS (The "Apple" Look) */}
-                <div className="absolute inset-0 rounded-xl border border-white/40 opacity-80 shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]"></div>
+                <div className="absolute inset-0 rounded-xl border border-white/30 opacity-80 shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]"></div>
 
                 {/* 6. DYNAMIC SPECULAR HIGHLIGHT (Follows Mouse) */}
                 <motion.div
                     style={{
                         background: useTransform(
                             [lightX, lightY],
-                            ([x, y]) => `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.3) 0%, transparent 40%)`
+                            ([x, y]) => `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.2) 0%, transparent 40%)`
                         )
                     }}
                     className="absolute inset-0 pointer-events-none"
                 />
 
                 {/* 7. CAUSTICS & BASE SCATTERING */}
-                <div className="absolute bottom-0 inset-x-0 h-1/3 bg-linear-to-t from-white/5 to-transparent blur-2xl pointer-events-none"></div>
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-px bg-white/30 blur-[0.5px] pointer-events-none"></div>
+                <div className="absolute bottom-0 inset-x-0 h-1/3 bg-linear-to-t from-white/5 to-transparent blur-lg pointer-events-none"></div>
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-px bg-white/20 pointer-events-none"></div>
             </div>
 
             {/* 8. INTERIOR PHYSICS LAYER */}

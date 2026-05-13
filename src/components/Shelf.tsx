@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "motion/react";
-import pixelShelf from "../assets/images/pixel_shelf.jpg";
-import f1Car from "../assets/images/f1_car.png";
-import fcbLogo from "../assets/images/fcb_logo.png";
-import rcbLogo from "../assets/images/rcb_logo.png";
-import flStudioLogo from "../assets/images/fl_studio_logo.png";
-import controllerLogo from "../assets/images/controller_logo.png";
-import wweLogo from "../assets/images/wwe_logo.png";
-import basketballLogo from "../assets/images/basketball_logo.png";
-import djLogo from "../assets/images/dj_logo.png";
+import pixelShelf from "../assets/images/pixel_shelf.webp";
+import f1Car from "../assets/images/f1_car.webp";
+import fcbLogo from "../assets/images/fcb_logo.webp";
+import rcbLogo from "../assets/images/rcb_logo.webp";
+import flStudioLogo from "../assets/images/fl_studio_logo.webp";
+import controllerLogo from "../assets/images/controller_logo.webp";
+import wweLogo from "../assets/images/wwe_logo.webp";
+import basketballLogo from "../assets/images/basketball_logo.webp";
+import djLogo from "../assets/images/dj_logo.webp";
 
 const Shelf: React.FC = () => {
     return (

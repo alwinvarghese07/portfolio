@@ -1,16 +1,16 @@
-import orders from "../../assets/images/order_flow.jpg";
-import myorders from "../../assets/images/myorders_flow.jpg";
-import lowFidelity from "../../assets/images/sketches.png";
+import orders from "../../assets/images/order_flow.webp";
+import myorders from "../../assets/images/myorders_flow.webp";
+import lowFidelity from "../../assets/images/sketches.webp";
 import Reveal from "../reveal";
 import notif from "../../assets/videos/notif.mp4"
 import liveTracking from "../../assets/videos/live_tracking.mp4"
 import orderlive from "../../assets/videos/order_live.mp4"
-import hifi from "../../assets/images/hifi_designs.png"
-import td_1 from "../../assets/images/td_1.png"
-import td_2 from "../../assets/images/td_2.png"
-import laundrymate from "../../assets/images/laundrymate.png"
-import spincycles from "../../assets/images/spincycles.png"
-import uclean from "../../assets/images/uclean.png"
+import hifi from "../../assets/images/hifi_designs.webp"
+import td_1 from "../../assets/images/td_1.webp"
+import td_2 from "../../assets/images/td_2.webp"
+import laundrymate from "../../assets/images/laundrymate.webp"
+import spincycles from "../../assets/images/spincycles.webp"
+import uclean from "../../assets/images/uclean.webp"
 
 export default function TumbledryContent() {
     return (

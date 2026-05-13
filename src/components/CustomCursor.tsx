@@ -1,15 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'motion/react';
 
 export default function CustomCursor() {
     const cursorRef = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const roundCursorRef = useRef<HTMLDivElement>(null);
+    const pillCursorRef = useRef<HTMLDivElement>(null);
+    const textRef = useRef<HTMLSpanElement>(null);
+    
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-    // Interaction states
-    const [isHoveringBento, setIsHoveringBento] = useState(false);
-    const [isClickable, setIsClickable] = useState(false);
-    const [cursorText, setCursorText] = useState<string | null>(null);
+    // Interaction states using refs
+    const isVisible = useRef(false);
+    const isHoveringBento = useRef(false);
+    const isClickable = useRef(false);
+    const currentText = useRef<string | null>(null);
 
     // Position tracking
     const mousePos = useRef({ x: 0, y: 0 });
@@ -25,7 +28,10 @@ export default function CustomCursor() {
 
         const onMouseMove = (e: MouseEvent) => {
             mousePos.current = { x: e.clientX, y: e.clientY };
-            if (!isVisible) setIsVisible(true);
+            if (!isVisible.current) {
+                isVisible.current = true;
+                if (cursorRef.current) cursorRef.current.style.opacity = '1';
+            }
 
             const target = e.target as HTMLElement;
 
@@ -33,19 +39,28 @@ export default function CustomCursor() {
             const bentoEl = target.closest("[data-cursor]") as HTMLElement;
             if (bentoEl) {
                 const label = bentoEl.getAttribute("data-cursor");
-                setCursorText(label);
-                setIsHoveringBento(true);
+                if (currentText.current !== label) {
+                    currentText.current = label;
+                    if (textRef.current) textRef.current.textContent = label;
+                }
+                isHoveringBento.current = true;
             } else {
-                setIsHoveringBento(false);
+                isHoveringBento.current = false;
             }
 
-            // 2. Detect Clickable items (Links, Buttons, or Bento Items)
+            // 2. Detect Clickable items
             const clickableEl = target.closest("a, button, [role='button'], [data-cursor]");
-            setIsClickable(!!clickableEl);
+            isClickable.current = !!clickableEl;
         };
 
-        const onMouseLeave = () => setIsVisible(false);
-        const onMouseEnter = () => setIsVisible(true);
+        const onMouseLeave = () => {
+            isVisible.current = false;
+            if (cursorRef.current) cursorRef.current.style.opacity = '0';
+        };
+        const onMouseEnter = () => {
+            isVisible.current = true;
+            if (cursorRef.current) cursorRef.current.style.opacity = '1';
+        };
 
         window.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseleave', onMouseLeave);
@@ -62,6 +77,28 @@ export default function CustomCursor() {
                 cursorRef.current.style.transform = `translate3d(${cursorPos.current.x}px, ${cursorPos.current.y}px, 0)`;
             }
 
+            // Update round cursor
+            if (roundCursorRef.current) {
+                if (isHoveringBento.current || isClickable.current) {
+                    roundCursorRef.current.style.transform = 'scale(0)';
+                    roundCursorRef.current.style.opacity = '0';
+                } else {
+                    roundCursorRef.current.style.transform = 'scale(1)';
+                    roundCursorRef.current.style.opacity = '1';
+                }
+            }
+
+            // Update pill cursor
+            if (pillCursorRef.current) {
+                if (isHoveringBento.current) {
+                    pillCursorRef.current.style.transform = 'scale(1)';
+                    pillCursorRef.current.style.opacity = '1';
+                } else {
+                    pillCursorRef.current.style.transform = 'scale(0.5)';
+                    pillCursorRef.current.style.opacity = '0';
+                }
+            }
+
             rafId = requestAnimationFrame(animate);
         };
         animate();
@@ -72,39 +109,34 @@ export default function CustomCursor() {
             document.removeEventListener('mouseenter', onMouseEnter);
             cancelAnimationFrame(rafId);
         };
-    }, [isVisible, isTouchDevice]);
+    }, [isTouchDevice]);
 
     if (isTouchDevice) return null;
 
     return (
         <div
             ref={cursorRef}
-            className={`fixed top-0 left-0 pointer-events-none z-10000 will-change-transform flex items-center justify-center transition-opacity duration-300
-                ${isVisible ? 'opacity-100' : 'opacity-0'}
-            `}
+            className="fixed top-0 left-0 pointer-events-none z-10000 will-change-transform flex items-center justify-center opacity-0 transition-opacity duration-300"
         >
-            {/* 1. ORIGINAL ROUND CURSOR (Visible in general areas) */}
+            {/* 1. ORIGINAL ROUND CURSOR */}
             <div
-                className={`w-8 h-8 -ml-4 -mt-4 transition-all duration-300 flex items-center justify-center
-                    ${(isHoveringBento || isClickable) ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
-                `}
+                ref={roundCursorRef}
+                className="w-8 h-8 -ml-4 -mt-4 transition-all duration-300 flex items-center justify-center will-change-transform"
                 style={{ mixBlendMode: 'difference' }}
             >
                 <div className="w-full h-full bg-white rounded-full border-[1.5px] border-black" />
             </div>
 
-            {/* 2. BLUE PILL CURSOR (Visible on Bento items) */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{
-                    opacity: isHoveringBento ? 1 : 0,
-                    scale: isHoveringBento ? 1 : 0.5
-                }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute flex flex-col items-start"
+            {/* 2. BLUE PILL CURSOR */}
+            <div
+                ref={pillCursorRef}
+                className="absolute flex flex-col items-start transition-all duration-300 ease-out will-change-transform"
                 style={{
                     left: 0,
-                    top: 0
+                    top: 0,
+                    transform: 'scale(0.5)',
+                    opacity: 0,
+                    transformOrigin: 'top left'
                 }}
             >
                 {/* Pointer Triangle (Tip is at 0,0) */}
@@ -115,11 +147,10 @@ export default function CustomCursor() {
 
                 {/* Text Pill */}
                 <div className="bg-[#0066FF] rounded-full px-4 py-2 shadow-2xl border border-white/10 flex items-center gap-2">
-                    <span className="text-white text-xs md:text-sm font-semibold whitespace-nowrap select-none">
-                        {cursorText}
+                    <span ref={textRef} className="text-white text-xs md:text-sm font-semibold whitespace-nowrap select-none">
                     </span>
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import manormama from "../assets/images/malayala_manorama.png";
-import itpro from "../assets/images/itpro.png";
+import manormama from "../assets/images/malayala_manorama.webp";
+import itpro from "../assets/images/itpro.webp";
 
 export default function Exp() {
     return (

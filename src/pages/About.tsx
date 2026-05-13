@@ -1,11 +1,13 @@
+import { lazy, Suspense } from "react";
 import { motion } from "motion/react";
 import Navbar from "../components/navbar";
 import MainLayout from "../layouts/MainLayout";
 import Footer1 from "../components/FooterDark";
-import SpotifyCard from "../components/SpotifyCard";
-import YTCard from "../components/YoutubeCard";
 import AboutLayout from "../components/BentoGrid";
 import CustomCursor from "../components/CustomCursor";
+
+const SpotifyCard = lazy(() => import("../components/SpotifyCard"));
+const YTCard = lazy(() => import("../components/YoutubeCard"));
 
 export default function About() {
     return (
@@ -38,11 +40,11 @@ export default function About() {
                                 {/* TITLE */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 40 }}
-                                    animate={{ opacity: 1, y: 0 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
                                     transition={{
                                         duration: 1.2,
                                         ease: [0.16, 1, 0.3, 1],
-                                        delay: 0.35
                                     }}
                                 >
                                     <span className="font-bold text-[#A6A6A6] font-['Bitcount_Prop_Single'] text-4xl md:text-[64px] leading-[100%] tracking-[1px]">
@@ -53,13 +55,14 @@ export default function About() {
                                 {/* PARAGRAPHS */}
                                 <motion.div
                                     initial="hidden"
-                                    animate="visible"
+                                    whileInView="visible"
+                                    viewport={{ once: true, margin: "-50px" }}
                                     variants={{
                                         hidden: {},
                                         visible: {
                                             transition: {
                                                 staggerChildren: 0.08,
-                                                delayChildren: 0.5
+                                                delayChildren: 0.1
                                             }
                                         }
                                     }}
@@ -98,11 +101,11 @@ export default function About() {
 
                             <motion.div
                                 initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{
                                     duration: 1.2,
                                     ease: [0.16, 1, 0.3, 1],
-                                    delay: 0.2
                                 }}
                                 className="mb-[60px]"
                             >
@@ -113,13 +116,14 @@ export default function About() {
 
                             <motion.div
                                 initial="hidden"
-                                animate="visible"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-100px" }}
                                 variants={{
                                     hidden: {},
                                     visible: {
                                         transition: {
                                             staggerChildren: 0.15,
-                                            delayChildren: 0.3
+                                            delayChildren: 0.1
                                         }
                                     }
                                 }}
@@ -139,7 +143,9 @@ export default function About() {
                                     }}
                                     className="w-full"
                                 >
-                                    <SpotifyCard />
+                                    <Suspense fallback={<div className="h-[250px] md:h-full w-full rounded-2xl bg-white/5" />}>
+                                        <SpotifyCard />
+                                    </Suspense>
                                 </motion.div>
 
                                 <motion.div
@@ -156,7 +162,9 @@ export default function About() {
                                     }}
                                     className="w-full"
                                 >
-                                    <YTCard />
+                                    <Suspense fallback={<div className="h-[250px] md:h-full w-full rounded-2xl bg-white/5" />}>
+                                        <YTCard />
+                                    </Suspense>
                                 </motion.div>
                             </motion.div>
 

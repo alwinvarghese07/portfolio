@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, lazy, Suspense } from "react";
 import { motion } from "motion/react";
-import profile from "../assets/images/alwin.png";
-import whiteboard from "../assets/images/whiteboard.png";
-import HyperGlass from "./HyperGlass";
-import Shelf from "./Shelf";
+import profile from "../assets/images/alwin.webp";
+import whiteboard from "../assets/images/whiteboard.webp";
 
+const HyperGlass = lazy(() => import("./HyperGlass"));
+const Shelf = lazy(() => import("./Shelf"));
 
 interface StickyNoteProps {
     text: string;
@@ -31,6 +31,7 @@ const StickyNote = ({ text, color, rotation, position, constraintsRef }: StickyN
                 top: position.y,
                 borderRadius: "2px 4px 3px 12px",
                 boxShadow: "inset 0 0 40px rgba(0,0,0,0.02), 2px 5px 15px rgba(0,0,0,0.08)",
+                willChange: "transform"
             }}
         >
             {/* Subtle Texture Layer */}
@@ -62,6 +63,7 @@ export default function BentoGrid() {
                         src={profile}
                         alt="Profile"
                         className="w-full h-full object-cover hover:grayscale-0 transition-all duration-700"
+                        fetchPriority="high"
                     />
                 </div>
 
@@ -70,7 +72,9 @@ export default function BentoGrid() {
                     data-cursor="My interests"
                     className="hidden md:block w-full rounded-xl overflow-hidden h-[250px] md:h-[300px] lg:h-full p-0 m-0 md:col-start-2 md:row-start-1 md:col-span-1 md:row-span-1 lg:col-start-3 lg:col-span-2 lg:row-start-1 lg:row-span-1"
                 >
-                    <Shelf />
+                    <Suspense fallback={<div className="w-full h-full bg-white/5" />}>
+                        <Shelf />
+                    </Suspense>
                 </div>
 
                 {/* 4. SPOTIFY EMBED */}
@@ -107,6 +111,8 @@ export default function BentoGrid() {
                     <img
                         src={whiteboard}
                         alt="Whiteboard"
+                        loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-fill pointer-events-none"
                     />
 
@@ -134,7 +140,9 @@ export default function BentoGrid() {
                     data-cursor="Tools i use"
                     className="hidden md:block h-[250px] lg:h-full overflow-hidden md:col-start-1 md:row-start-2 md:col-span-1 md:row-span-1 lg:col-start-2 lg:row-start-1 lg:col-span-1 lg:row-span-1 rounded-xl"
                 >
-                    <HyperGlass />
+                    <Suspense fallback={<div className="w-full h-full bg-white/5" />}>
+                        <HyperGlass />
+                    </Suspense>
                 </div>
 
             </div>

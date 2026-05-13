@@ -1,9 +1,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
-import youtubeLogo from "../assets/images/yt.png";
-import weightless from "../assets/images/weightless_remix.png";
-import makeyoumine from "../assets/images/makeyoumine.png";
-import control from "../assets/images/control.png";
+import youtubeLogo from "../assets/images/yt.webp";
+import weightless from "../assets/images/weightless_remix.webp";
+import makeyoumine from "../assets/images/makeyoumine.webp";
+import control from "../assets/images/control.webp";
 
 export default function YTCard() {
     const cardRef = useRef<HTMLAnchorElement>(null);

@@ -7,8 +7,8 @@ import FooterDark from "../components/FooterDark";
 import CustomCursor from "../components/CustomCursor";
 import TumbledryContent from "../components/case-studies/TumbledryContent";
 import WanderContent from "../components/case-studies/WanderContent";
-import Wander from "../assets/images/header.png";
-import TumbleDry from "../assets/images/alwin.png";
+import Wander from "../assets/images/header.webp";
+import TumbleDry from "../assets/images/alwin.webp";
 import MainLayout from "../layouts/MainLayout";
 
 

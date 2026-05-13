@@ -1,6 +1,6 @@
-import mailIcon from "../assets/images/mail.png";
-import linkedinIcon from "../assets/images/linkedin.png";
-import xIcon from "../assets/images/insta.png";
+import mailIcon from "../assets/images/mail.webp";
+import linkedinIcon from "../assets/images/linkedin.webp";
+import xIcon from "../assets/images/insta.webp";
 
 export default function Footer() {
     return (
