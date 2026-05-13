@@ -67,7 +67,6 @@ export default function CaseStudy() {
         <div className="w-full min-h-screen flex flex-col bg-[#0E0E0E] text-white relative">
             <MainLayout>
                 <div className="flex flex-col px-4 md:px-8 max-w-7xl mx-auto gap-6 md:gap-10 grow">
-                    <Navbar />
                     {/* Header */}
                     <div className="flex flex-col gap-6 max-w-4xl">
                         <button

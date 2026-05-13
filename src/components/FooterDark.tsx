@@ -5,7 +5,7 @@ import xIcon from "../assets/images/insta.png";
 export default function Footer() {
     return (
         <footer className="w-full mt-10 md:mt-20 pt-10 border-t border-[#464646]">
-            <div className="max-w-[1400px] mx-auto px-8">
+            <div className="max-w-[1400px] mx-auto px-1">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-10 mt-10">
                     {/* Left side */}
                     <div className="flex flex-col gap-4">
@@ -44,7 +44,7 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="w-full mt-16 md:mt-24 mb-16 flex justify-center">
+                <div className="w-full mt-16 md:mt-24 mb-4 flex justify-center">
                     <span className="text-[12px] md:text-[14px] text-white/75 font-medium font-['Inter']">
                         © Alwin Varghese Saji, 2026
                     </span>

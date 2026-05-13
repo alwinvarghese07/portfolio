@@ -24,14 +24,14 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
     return (
-        <div className="w-full max-w-[1400px] mx-auto px-4">
+        <div className="w-full max-w-[1400px] mx-auto px-1">
             <ExperienceHistory />
             <div className="mt-[100px] mb-[26px] md:mb-[60px]">
                 <span className="text-4xl md:text-[64px] font-bold text-[#ffffff] font-['Bitcount_Prop_Single'] tracking-[1px]">
                     Selected Works
                 </span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 text-md md:text-lg text-white/70 font-['Inter'] leading-relaxed font-light">
                 {PROJECTS.map((project, index) => (
                     <ProjectCard key={index} {...project} />
                 ))}

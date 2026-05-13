@@ -51,13 +51,12 @@ export default function BentoGrid() {
 
     return (
         <div className="w-full max-w-7xl mx-auto">
-            {/* GRID */}
-            <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-[1.15fr_0.85fr] gap-4 h-auto md:h-[560px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[1.15fr_0.85fr] gap-4 h-auto lg:h-[560px]">
 
                 {/* 1. PROFILE */}
                 <div
                     data-cursor="Yep, that's me"
-                    className="rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 md:col-start-1 md:row-start-1 md:col-span-1 md:row-span-2"
+                    className="rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 h-[350px] md:h-[300px] lg:h-full md:col-start-1 md:row-start-1 md:col-span-1 md:row-span-1 lg:col-start-1 lg:row-start-1 lg:col-span-1 lg:row-span-2"
                 >
                     <img
                         src={profile}
@@ -69,7 +68,7 @@ export default function BentoGrid() {
                 {/* 3. SHELF (Replaces Board Games) */}
                 <div
                     data-cursor="My interests"
-                    className="w-full h-full p-0 m-0 md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1"
+                    className="hidden md:block w-full rounded-xl overflow-hidden h-[250px] md:h-[300px] lg:h-full p-0 m-0 md:col-start-2 md:row-start-1 md:col-span-1 md:row-span-1 lg:col-start-3 lg:col-span-2 lg:row-start-1 lg:row-span-1"
                 >
                     <Shelf />
                 </div>
@@ -77,7 +76,7 @@ export default function BentoGrid() {
                 {/* 4. SPOTIFY EMBED */}
                 <div
                     data-cursor="On Loop"
-                    className="overflow-hidden rounded-3xl hover:scale-[1.02] transition-transform duration-500 md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-1"
+                    className="hidden md:block overflow-hidden rounded-3xl hover:scale-[1.02] transition-transform duration-500 h-[152px] lg:h-full md:col-start-1 md:col-span-2 md:row-start-3 md:row-span-1 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-1"
                 >
                     <div className="relative w-full h-full overflow-hidden" style={{ minHeight: '152px' }}>
                         <iframe
@@ -102,7 +101,7 @@ export default function BentoGrid() {
                 <div
                     ref={freezerRef}
                     data-cursor="Drag around the notes"
-                    className="relative overflow-hidden group md:col-start-4 md:row-start-2 md:col-span-1 md:row-span-1 rounded-xl"
+                    className="hidden md:block relative overflow-hidden group h-[250px] lg:h-full md:col-start-2 md:row-start-2 md:col-span-1 md:row-span-1 lg:col-start-4 lg:row-start-2 lg:col-span-1 lg:row-span-1 rounded-xl"
                 >
                     {/* Whiteboard Background Image */}
                     <img
@@ -133,7 +132,7 @@ export default function BentoGrid() {
                 {/* 7. HYPER-REALISTIC GLASS CORE (Replaces Static Notes) */}
                 <div
                     data-cursor="Tools i use"
-                    className="md:col-start-2 md:row-start-1 md:col-span-1 md:row-span-1 overflow-hidden"
+                    className="hidden md:block h-[250px] lg:h-full overflow-hidden md:col-start-1 md:row-start-2 md:col-span-1 md:row-span-1 lg:col-start-2 lg:row-start-1 lg:col-span-1 lg:row-span-1 rounded-xl"
                 >
                     <HyperGlass />
                 </div>

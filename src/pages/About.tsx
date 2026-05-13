@@ -30,7 +30,7 @@ export default function About() {
                         </div>
 
                         {/* HERO SECTION */}
-                        <div className="md:pt-20 flex flex-col gap-8 mt-5">
+                        <div className="pt-20 flex flex-col gap-8">
 
                             {/* TEXT */}
                             <div className="w-full flex flex-col gap-8">
@@ -63,7 +63,7 @@ export default function About() {
                                             }
                                         }
                                     }}
-                                    className="flex flex-col gap-6 text-sm md:text-lg text-white/70 font-['Inter'] leading-relaxed font-light"
+                                    className="flex flex-col gap-6 text-md md:text-lg text-white/70 font-['Inter'] leading-relaxed font-light"
                                 >
                                     {[
                                         "I'm Alwin Varghese Saji, a UI/UX designer from India and a Computer Science undergrad, focused on designing clear, practical digital experiences.",
@@ -94,7 +94,7 @@ export default function About() {
                         </div>
 
                         {/* OUTSIDE DESIGN */}
-                        <div className="py-20 flex flex-col items-center">
+                        <div className="hidden md:flex py-20 flex-col items-center">
 
                             <motion.div
                                 initial={{ opacity: 0, y: 40 }}
