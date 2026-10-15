@@ -88,7 +88,7 @@ export default function Navbar() {
                     }}
                 >
                     <a
-                        href="https://drive.google.com/file/d/1Nc1YwI7ZOyQBPGbyJnTUbLVJoFc5JC7g/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1r3jEqdz_HtzVwi0IG0PkzaqbjFSk0Lok/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="opacity-50 hover:opacity-100 transition-opacity duration-300"
