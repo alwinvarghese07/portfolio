@@ -128,7 +128,7 @@ export default function BentoGrid() {
                             constraintsRef={freezerRef}
                         />
                         <StickyNote
-                            text="UX Designer"
+                            text="Product Designer"
                             color="bg-[#FCE7F3]"
                             rotation={4}
                             position={{ x: 140, y: 130 }}
