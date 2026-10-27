@@ -11,6 +11,8 @@ import td_2 from "../../assets/images/td_2.webp"
 import laundrymate from "../../assets/images/laundrymate.webp"
 import spincycles from "../../assets/images/spincycles.webp"
 import uclean from "../../assets/images/uclean.webp"
+import emptyState1 from "../../assets/images/empty_bag.png";
+import emptyState2 from "../../assets/images/no_slot.png";
 
 export default function TumbledryContent() {
     return (
@@ -160,6 +162,35 @@ export default function TumbledryContent() {
                     </div>
                     <div className="rounded-4xl overflow-hidden mt-6">
                         <img src={hifi} alt="High Fidelity Screens" className="w-full h-full rounded-3xl" />
+                    </div>
+                </div>
+            </Reveal>
+
+            {/* EMPTY STATES */}
+            <Reveal>
+                <div className="flex flex-col gap-8 md:gap-10">
+                    <div className="flex flex-col gap-4">
+                        <h4 className="text-3xl font-['Bitcount_Prop_Single'] text-[#FFFFFF]">Empty States</h4>
+                        <p className="text-[#D4D4D4] text-md md:text-lg leading-relaxed max-w-full">
+                            Empty states play a crucial role in guiding users when there's no data to display. I designed them to be informative yet visually engaging, ensuring users understand what to do next.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                        <div className="rounded-3xl md:rounded-4xl overflow-hidden bg-[#1c1c1c] border border-zinc-800/50 flex items-center justify-center p-6 md:p-8">
+                            <img
+                                src={emptyState1}
+                                alt="Empty State Placeholder 1"
+                                className="w-full max-h-[580px] object-contain rounded-2xl"
+                            />
+                        </div>
+                        <div className="rounded-3xl md:rounded-4xl overflow-hidden bg-[#1c1c1c] border border-zinc-800/50 flex items-center justify-center p-6 md:p-8">
+                            <img
+                                src={emptyState2}
+                                alt="Empty State Placeholder 2"
+                                className="w-full max-h-[580px] object-contain rounded-2xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </Reveal>
